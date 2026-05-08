@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This file was created by ACADEMIC version of SMILE -->
+<smile version="1.0" id="Unnamed" numsamples="10000" discsamples="10000">
+	<nodes>
+		<cpt id="U1">
+			<state id="a" />
+			<state id="b" />
+			<probabilities>4.844814112729928e-25 1</probabilities>
+		</cpt>
+		<cpt id="U2">
+			<state id="a" />
+			<state id="b" />
+			<probabilities>0 1</probabilities>
+		</cpt>
+		<cpt id="U3">
+			<state id="a" />
+			<state id="b" />
+			<probabilities>0.9999997561344574 2.438655427413721e-07</probabilities>
+		</cpt>
+		<cpt id="Z3">
+			<state id="a" />
+			<state id="b" />
+			<parents>U3</parents>
+			<probabilities>0.02171056917669735 0.9782894308233026 0.006809692257751613 0.9931903077422483</probabilities>
+		</cpt>
+		<cpt id="X2">
+			<state id="a" />
+			<state id="b" />
+			<parents>U1 U2 Z3</parents>
+			<probabilities>4.050039169466856e-27 1 0.9999999999999999 1.126404722550682e-31 7.182035442344791e-41 1 4.639673770284832e-63 1 3.838867831027056e-06 0.9999961611321689 0.0210068756506275 0.9789931243493725 0.9999999858605235 1.413947637436784e-08 1.218645959007886e-05 0.9999878135404099</probabilities>
+		</cpt>
+		<cpt id="X1">
+			<state id="a" />
+			<state id="b" />
+			<parents>U1 X2</parents>
+			<probabilities>1 2.552412535318571e-34 0.9955875246104701 0.004412475389530069 0.9995209933389434 0.0004790066610565582 5.727752252011408e-31 0.9999999999999999</probabilities>
+		</cpt>
+		<cpt id="Z1">
+			<state id="a" />
+			<state id="b" />
+			<parents>U3 X1</parents>
+			<probabilities>0.998996440164583 0.00100355983541689 0.9974228471583085 0.002577152841691441 0.004852289404975065 0.9951477105950249 1.402143921574259e-20 1</probabilities>
+		</cpt>
+		<cpt id="Z2">
+			<state id="a" />
+			<state id="b" />
+			<parents>U2 Z3</parents>
+			<probabilities>0.05560533211382739 0.9443946678861728 1 5.638145911705724e-62 1.023374471732306e-07 0.9999998976625528 0.003075827088678348 0.9969241729113216</probabilities>
+		</cpt>
+		<cpt id="Y">
+			<state id="a" />
+			<state id="b" />
+			<parents>Z1 Z2 X2</parents>
+			<probabilities>0.9999999999999999 2.751119907454751e-17 0.999076153188707 0.0009238468112929726 0.4479549935968871 0.5520450064031128 6.589028955031058e-06 0.999993410971045 5.795818563334693e-05 0.9999420418143666 0.6731136813736107 0.3268863186263893 0.02651671931542331 0.9734832806845767 2.82002343287686e-05 0.9999717997656712</probabilities>
+		</cpt>
+	</nodes>
+	<extensions>
+		<genie version="1.0" app="SMILE_ACADEMIC 2.2.0@40eb97e8a55a" name="Unnamed">
+			<node id="X1">
+				<name>X1</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>100 100 185 155</position>
+			</node>
+			<node id="X2">
+				<name>X2</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>100 100 185 155</position>
+			</node>
+			<node id="Z1">
+				<name>Z1</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>120 80 205 135</position>
+			</node>
+			<node id="Z2">
+				<name>Z2</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>120 81 205 136</position>
+			</node>
+			<node id="Z3">
+				<name>Z3</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>120 82 205 137</position>
+			</node>
+			<node id="Y">
+				<name>Y</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>50 50 135 105</position>
+			</node>
+			<node id="U1">
+				<name>U1</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>85 50 170 105</position>
+			</node>
+			<node id="U2">
+				<name>U2</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>120 50 205 105</position>
+			</node>
+			<node id="U3">
+				<name>U3</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>120 50 205 105</position>
+			</node>
+		</genie>
+	</extensions>
+</smile>

@@ -1,0 +1,13 @@
+{
+  "model_name": "ex1_TD2_10",
+  "template_name": "em_ex1_TD2_10_ED2_1",
+  "log_likelihood": -79.03697404949853,
+  "bic_score": 167.28428847097322,
+  "elapsed_seconds": 0.1209252920000008,
+  "num_hidden_nodes": 2,
+  "hidden_nodes": [
+    "U1",
+    "U2"
+  ],
+  "learned_model_path": "learned_models/ex1_TD2_10_100_test_ex1/ex1_TD2_10/em_ex1_TD2_10_ED2_1/em_ex1_TD2_10_ED2_1.xdsl"
+}

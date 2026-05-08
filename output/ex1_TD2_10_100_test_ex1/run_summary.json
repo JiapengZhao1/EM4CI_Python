@@ -1,0 +1,12 @@
+[
+  {
+    "experiment": "ex1_TD2_10",
+    "num_samples": 100,
+    "best_bic": 167.2842884709675,
+    "best_model": "learned_models/ex1_TD2_10_100_test_ex1/ex1_TD2_10/em_ex1_TD2_10_ED2_2/em_ex1_TD2_10_ED2_2.xdsl",
+    "average_error": 0.4806997029744916,
+    "weighted_error": 1.0959245472935915,
+    "ate_error": 0.9613994059489831,
+    "status": "ok"
+  }
+]

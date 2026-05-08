@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This file was created by ACADEMIC version of SMILE -->
+<smile version="1.0" id="Alarm" numsamples="1000" discsamples="10000">
+	<nodes>
+		<cpt id="Anaphylaxis" target="true" diagtype="target">
+			<state id="True" fault="true" />
+			<state id="False" />
+			<probabilities>0.01 0.99</probabilities>
+		</cpt>
+		<cpt id="Intubation" target="true" diagtype="target">
+			<state id="Normal" />
+			<state id="Esophageal" fault="true" />
+			<probabilities>6.981535952351722e-11 0.9999999999301846</probabilities>
+		</cpt>
+		<cpt id="KinkedTube" target="true" diagtype="target">
+			<state id="a" fault="true" />
+			<state id="b" />
+			<probabilities>6.981535952351722e-11 0.9999999999301846</probabilities>
+		</cpt>
+		<cpt id="Disconnect" target="true" diagtype="target">
+			<state id="True" fault="true" />
+			<state id="False" />
+			<probabilities>0.05 0.95</probabilities>
+		</cpt>
+		<cpt id="MinVolSet" diagtype="observation" ranked="true">
+			<state id="Low" />
+			<state id="Normal" />
+			<state id="High" />
+			<probabilities>0.01 0.98 0.01</probabilities>
+		</cpt>
+		<cpt id="VentMach">
+			<state id="Zero" />
+			<state id="Low" />
+			<state id="Normal" />
+			<state id="High" />
+			<parents>MinVolSet</parents>
+			<probabilities>0.01 0.97 0.01 0.01 0.01 0.01 0.97 0.01 0.01 0.01 0.01 0.97</probabilities>
+		</cpt>
+		<cpt id="VentTube">
+			<state id="Zero" />
+			<state id="Low" />
+			<state id="Normal" />
+			<state id="High" />
+			<parents>Disconnect VentMach</parents>
+			<probabilities>0.97 0.01 0.01 0.01 0.97 0.01 0.01 0.01 0.97 0.01 0.01 0.01 0.97 0.01 0.01 0.01 0.97 0.01 0.01 0.01 0.01 0.97 0.01 0.01 0.01 0.01 0.97 0.01 0.01 0.01 0.01 0.97</probabilities>
+		</cpt>
+		<cpt id="VentLung">
+			<state id="Zero" />
+			<state id="Low" />
+			<state id="Normal" />
+			<state id="High" />
+			<parents>KinkedTube Intubation VentTube</parents>
+			<probabilities>0.07701475959944436 4.95506646059415e-09 1.235409329167216e-05 0.9229728813521975 0.0008127839189992641 0.9991871099729893 6.744280305924597e-09 9.936373104428003e-08 0.9749097863412971 1.544512432100771e-11 0.02506936069887393 2.085294438384518e-05 3.575607446305705e-19 0.05757463748856593 0.941918951546198 0.000506410965236079 1.508966827198956e-06 0.9910226025398681 2.135113937736588e-29 0.008975888493304891 1.610276166780481e-09 5.538820689928791e-05 0.04934394775017861 0.950600662432646 1.328917503465572e-08 3.195556248171137e-13 0.9999999849701493 1.740356232607515e-09 0.8062941395610684 5.445121097690179e-10 2.393181972288096e-07 0.1937056205762223 0.002049152293167497 0.9723247620295766 0.02562603912364583 4.655361005506758e-08 0.001450629591950798 0.002352131690724197 8.457746008522586e-09 0.9961972302595791 0.5234592392051602 1.794066782077402e-33 0.0004583663342232319 0.4760823944606165 5.293015726856644e-09 0.0009125433830271624 4.601862822631768e-06 0.9990828494611346 0.3692358099440509 1.455315587934352e-05 0.6306900917812114 5.954511885841492e-05 0.7885304877951168 0.01439876855852642 0.1962748516076451 0.0007958920387117711 0.9722820110874741 2.895630417682734e-08 0.024556976112432 0.003160983843789764 2.02178388371363e-07 0.04833658127449798 0.0003898639850558444 0.9512733525620577</probabilities>
+		</cpt>
+		<cpt id="VentAlv">
+			<state id="Zero" />
+			<state id="Low" />
+			<state id="Normal" />
+			<state id="High" />
+			<parents>Intubation VentLung</parents>
+			<probabilities>1.066961709200755e-06 4.076483911070545e-12 0.0001703410294563087 0.9998285920047579 0.8689662516210185 0.07881312979025289 0.03198301283241544 0.02023760575631311 0.9992413022158506 0.0005485671256666021 3.769536187660955e-14 0.0002101306584451805 0.8147417337588491 0.00161300255613093 0.1831054492515398 0.0005398144334802381 0.0007255948417069888 6.863034407816161e-21 0.002123490048225444 0.9971509151100675 2.763331722481631e-12 0.3564555187898596 0.6435444812028851 4.491890192483225e-12 0.03365284645155984 0.9595314520199516 1.396273909495371e-12 0.006815701527092265 0.703456663506977 0.00110326214561844 0.02721386135584377 0.2682262129915609</probabilities>
+		</cpt>
+		<cpt id="ArtCO2">
+			<state id="Low" />
+			<state id="Normal" />
+			<state id="High" />
+			<parents>VentAlv</parents>
+			<probabilities>0.01 0.01 0.98 0.01 0.01 0.98 0.04 0.92 0.04 0.9 0.09 0.01</probabilities>
+		</cpt>
+		<cpt id="TPR" diagtype="observation" ranked="true">
+			<state id="Low" />
+			<state id="Normal" />
+			<state id="High" />
+			<parents>Anaphylaxis</parents>
+			<probabilities>0.98 0.01 0.01 0.3 0.4 0.3</probabilities>
+		</cpt>
+		<cpt id="Hypovolemia" target="true" diagtype="target">
+			<state id="a" fault="true" />
+			<state id="b" />
+			<probabilities>0.9373254068658537 0.06267459313414618</probabilities>
+		</cpt>
+		<cpt id="LVFailure" target="true" diagtype="target">
+			<state id="a" fault="true" />
+			<state id="b" />
+			<probabilities>0.9986185059702138 0.001381494029786218</probabilities>
+		</cpt>
+		<cpt id="StrokeVolume">
+			<state id="Low" />
+			<state id="Normal" />
+			<state id="High" />
+			<parents>Hypovolemia LVFailure</parents>
+			<probabilities>2.544330327803988e-13 0.8819455197009965 0.1180544802987491 0.01412833390654446 0.01611833690948545 0.9697533291839701 0.1094600972514943 0.8378293916890339 0.05271051105947178 0.7869765937123908 2.231542280380826e-06 0.2130211747453288</probabilities>
+		</cpt>
+		<cpt id="InsuffAnesth" target="true" diagtype="target">
+			<state id="True" fault="true" />
+			<state id="False" />
+			<probabilities>0.2 0.8</probabilities>
+		</cpt>
+		<cpt id="PulmEmbolus" target="true" diagtype="target">
+			<state id="a" fault="true" />
+			<state id="b" />
+			<probabilities>1.950648909107434e-05 0.9999804935109089</probabilities>
+		</cpt>
+		<cpt id="Shunt">
+			<state id="Normal" />
+			<state id="High" />
+			<parents>PulmEmbolus Intubation</parents>
+			<probabilities>8.411194823668535e-39 1 0.7303873919237357 0.2696126080762644 2.202933484049004e-18 1 1 2.66838235079001e-23</probabilities>
+		</cpt>
+		<cpt id="FiO2" diagtype="observation" ranked="true">
+			<state id="Low" />
+			<state id="Normal" />
+			<probabilities>0.01 0.99</probabilities>
+		</cpt>
+		<cpt id="PVSat">
+			<state id="Low" />
+			<state id="Normal" />
+			<state id="High" />
+			<parents>FiO2 VentAlv</parents>
+			<probabilities>0.98 0.01 0.01 0.98 0.01 0.01 0.95 0.04 0.01 0.95 0.04 0.01 0.98 0.01 0.01 0.98 0.01 0.01 0.01 0.95 0.04 0.01 0.01 0.98</probabilities>
+		</cpt>
+		<cpt id="SaO2" diagtype="observation" ranked="true">
+			<state id="Low" />
+			<state id="Normal" />
+			<state id="High" />
+			<parents>Shunt PVSat</parents>
+			<probabilities>0.98 0.01 0.01 0.01 0.98 0.01 0.01 0.01 0.98 0.98 0.01 0.01 0.98 0.01 0.01 0.6899999999999999 0.3 0.01</probabilities>
+		</cpt>
+		<cpt id="Catechol">
+			<state id="Normal" />
+			<state id="High" />
+			<parents>InsuffAnesth SaO2 TPR ArtCO2</parents>
+			<probabilities>0.01 0.99 0.01 0.99 0.01 0.99 0.01 0.99 0.01 0.99 0.01 0.99 0.01 0.99 0.01 0.99 0.01 0.99 0.01 0.99 0.01 0.99 0.01 0.99 0.01 0.99 0.01 0.99 0.01 0.99 0.05 0.95 0.05 0.95 0.01 0.99 0.01 0.99 0.01 0.99 0.01 0.99 0.05 0.95 0.05 0.95 0.01 0.99 0.05 0.95 0.05 0.95 0.01 0.99 0.05 0.95 0.05 0.95 0.01 0.99 0.05 0.95 0.05 0.95 0.01 0.99 0.05 0.95 0.05 0.95 0.01 0.99 0.1 0.9 0.1 0.9 0.1 0.9 0.95 0.05 0.95 0.05 0.3 0.7 0.95 0.05 0.95 0.05 0.3 0.7 0.95 0.05 0.95 0.05 0.3 0.7 0.99 0.01 0.99 0.01 0.99 0.01 0.95 0.05 0.99 0.01 0.3 0.7</probabilities>
+		</cpt>
+		<cpt id="HR">
+			<state id="Low" />
+			<state id="Normal" />
+			<state id="High" />
+			<parents>Catechol</parents>
+			<probabilities>0.1 0.89 0.01 0.01 0.09 0.9</probabilities>
+		</cpt>
+		<cpt id="CO" diagtype="observation" ranked="true">
+			<state id="Low" />
+			<state id="Normal" />
+			<state id="High" />
+			<parents>StrokeVolume HR</parents>
+			<probabilities>0.98 0.01 0.01 0.95 0.04 0.01 0.8 0.19 0.01 0.95 0.04 0.01 0.04 0.95 0.01 0.01 0.04 0.95 0.3 0.6899999999999999 0.01 0.01 0.3 0.6899999999999999 0.01 0.01 0.98</probabilities>
+		</cpt>
+		<cpt id="BP" diagtype="observation" ranked="true">
+			<state id="Low" />
+			<state id="Normal" />
+			<state id="High" />
+			<parents>TPR CO</parents>
+			<probabilities>0.98 0.01 0.01 0.98 0.01 0.01 0.9 0.09 0.01 0.98 0.01 0.01 0.1 0.85 0.05 0.05 0.2 0.75 0.3 0.6 0.1 0.05 0.4 0.55 0.01 0.09 0.9</probabilities>
+		</cpt>
+		<cpt id="LVEDVolume">
+			<state id="Low" />
+			<state id="Normal" />
+			<state id="High" />
+			<parents>Hypovolemia LVFailure</parents>
+			<probabilities>0.7695930494672975 0.06653423653348446 0.1638727139992182 0.02734783580118291 0.924465133617675 0.04818703058114206 3.955937846648322e-12 0.0002583843079865922 0.9997416156880574 0.9936155046980149 3.794532611886141e-07 0.006384115848724042</probabilities>
+		</cpt>
+		<cpt id="CVP" diagtype="observation" ranked="true">
+			<state id="Low" />
+			<state id="Normal" />
+			<state id="High" />
+			<parents>LVEDVolume</parents>
+			<probabilities>0.95 0.04 0.01 0.04 0.95 0.01 0.01 0.29 0.7</probabilities>
+		</cpt>
+		<cpt id="ErrCauter">
+			<state id="True" />
+			<state id="False" />
+			<probabilities>0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="ErrLowOutput">
+			<state id="True" />
+			<state id="False" />
+			<probabilities>0.05 0.95</probabilities>
+		</cpt>
+		<cpt id="ExpCO2" diagtype="observation" ranked="true">
+			<state id="Zero" />
+			<state id="Low" />
+			<state id="Normal" />
+			<state id="High" />
+			<parents>ArtCO2 VentLung</parents>
+			<probabilities>0.97 0.01 0.01 0.01 0.01 0.97 0.01 0.01 0.01 0.97 0.01 0.01 0.01 0.97 0.01 0.01 0.97 0.01 0.01 0.01 0.01 0.01 0.97 0.01 0.01 0.01 0.97 0.01 0.01 0.01 0.97 0.01 0.97 0.01 0.01 0.01 0.01 0.01 0.01 0.97 0.01 0.01 0.01 0.97 0.01 0.01 0.01 0.97</probabilities>
+		</cpt>
+		<cpt id="HRBP" diagtype="observation" ranked="true">
+			<state id="Low" />
+			<state id="Normal" />
+			<state id="High" />
+			<parents>ErrLowOutput HR</parents>
+			<probabilities>0.98 0.01 0.01 0.4 0.59 0.01 0.3 0.4 0.3 0.98 0.01 0.01 0.01 0.98 0.01 0.01 0.01 0.98</probabilities>
+		</cpt>
+		<cpt id="HREKG" diagtype="observation" ranked="true">
+			<state id="Low" />
+			<state id="Normal" />
+			<state id="High" />
+			<parents>ErrCauter HR</parents>
+			<probabilities>0.3333333333333333 0.3333333333333333 0.3333333333333334 0.3333333333333333 0.3333333333333333 0.3333333333333334 0.3333333333333333 0.3333333333333333 0.3333333333333334 0.98 0.01 0.01 0.01 0.98 0.01 0.01 0.01 0.98</probabilities>
+		</cpt>
+		<cpt id="HRSat" diagtype="observation" ranked="true">
+			<state id="Low" />
+			<state id="Normal" />
+			<state id="High" />
+			<parents>ErrCauter HR</parents>
+			<probabilities>0.3333333333333333 0.3333333333333333 0.3333333333333334 0.3333333333333333 0.3333333333333333 0.3333333333333334 0.3333333333333333 0.3333333333333333 0.3333333333333334 0.98 0.01 0.01 0.01 0.98 0.01 0.01 0.01 0.98</probabilities>
+		</cpt>
+		<cpt id="History" diagtype="observation" ranked="true">
+			<state id="True" />
+			<state id="False" />
+			<parents>LVFailure</parents>
+			<probabilities>1.04968647359944e-12 0.9999999999989504 0.999999999999992 8.025737748557941e-15</probabilities>
+		</cpt>
+		<cpt id="MinVol" diagtype="observation" ranked="true">
+			<state id="Zero" />
+			<state id="Low" />
+			<state id="Normal" />
+			<state id="High" />
+			<parents>Intubation VentLung</parents>
+			<probabilities>2.46813613754012e-35 0.9999308442990638 5.65551369287148e-05 1.260056400752999e-05 0.587179921302193 0.4128186555039726 1.423181426164616e-06 1.24081676788101e-11 4.827641470041662e-05 0.06555642407074079 0.93439519551492 1.039996389081067e-07 7.914231915521931e-05 0.9999182505183071 1.771771859342231e-06 8.353906782979573e-07 0.9236142622588716 0.0009319503911136785 0.0753435984516445 0.0001101888983702313 0.03860360891628873 0.6841070982783082 0.07085984509374198 0.2064294477116611 0.9703516186811354 0.02938387450765396 3.88031481403579e-07 0.0002641187797291261 2.440305332738058e-12 6.154130802631311e-09 0.2664348232189113 0.7335651706245178</probabilities>
+		</cpt>
+		<cpt id="PAP" diagtype="observation" ranked="true">
+			<state id="Low" />
+			<state id="Normal" />
+			<state id="High" />
+			<parents>PulmEmbolus</parents>
+			<probabilities>2.841649028662102e-05 0.9842416548318594 0.01572992867785395 0.01572851703817035 0.9842714829618296 2.554479896519487e-30</probabilities>
+		</cpt>
+		<cpt id="PCWP" diagtype="observation" ranked="true">
+			<state id="Low" />
+			<state id="Normal" />
+			<state id="High" />
+			<parents>LVEDVolume</parents>
+			<probabilities>0.95 0.04 0.01 0.04 0.95 0.01 0.01 0.04 0.95</probabilities>
+		</cpt>
+		<cpt id="Press" diagtype="observation" ranked="true">
+			<state id="Zero" />
+			<state id="Low" />
+			<state id="Normal" />
+			<state id="High" />
+			<parents>KinkedTube Intubation VentTube</parents>
+			<probabilities>0.9999948218787671 1.406047612085657e-12 4.836363297449609e-06 3.417565293874978e-07 4.574152995537091e-12 0.9577448439298092 2.272594933160728e-40 0.04225515606561676 3.648660921251516e-12 2.33603084359806e-07 1.604992470912871e-16 0.9999997663932667 9.275081048608238e-12 0.01496018548334628 2.409563625085061e-05 0.9850157188711277 9.422021551594069e-18 0.000125937886469651 0.001280674871133782 0.9985933872423965 0.7374073560438894 0.0004602980565087047 0.006618571705094979 0.2555137741945069 0.5432680781613517 0.4567318250292507 3.895657226742633e-19 9.680939752207671e-08 0.0002323274705844695 0.908865981459692 2.352261827486306e-05 0.0908781684514486 1.199040715389171e-13 2.093687861325167e-15 7.069855504706807e-14 0.9999999999998073 0.9994480938807383 0.0005519061192617304 0 6.461893734201824e-34 0.9821444726842308 0.01648700863388574 4.653300314968694e-08 0.001368472148880196 3.684394783618364e-31 1.177184248995273e-28 0.03263405662868901 0.9673659433713109 0.005661582285298093 0.5740841926195031 0.4202542234370615 1.658137273205657e-09 9.425870695453125e-38 0.9999999999998912 3.205248497877221e-52 1.088844643634191e-13 0.01885546335900557 0.001155317264179491 0.7533621433635572 0.2266270760132577 1.076919302780744e-06 0.9313819349858212 0.06861698803762385 5.72523048184038e-11</probabilities>
+		</cpt>
+	</nodes>
+	<extensions>
+		<genie version="1.0" app="SMILE_ACADEMIC 2.2.0@40eb97e8a55a" name="Alarm">
+			<comment>The Alarm network has been developed for on-line monitoring of patients in intensive care units and generously contributed to the community by Ingo Beinlich and his collaborators.\nReference:\nThe model has first appeared in the following paper:\nI. Beinlich and G. Suermondt and R. Chavez and G. Cooper, The ALARM monitoring system: A case study with two probabilistic inference techniques for belief networks, Proceedings of the 2nd European Conference on AI and Medicine, Springer-Verlag, Berlin, 1989.</comment>
+			<node id="Anaphylaxis">
+				<name>Anaphylaxis</name>
+				<interior color="ffcc00" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>262 162 350 198</position>
+			</node>
+			<node id="Intubation">
+				<name>Intubation</name>
+				<interior color="ffcc00" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>690 23 766 59</position>
+			</node>
+			<node id="KinkedTube">
+				<name>KinkedTube</name>
+				<interior color="ffcc00" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>791 23 874 59</position>
+			</node>
+			<node id="Disconnect">
+				<name>Disconnect</name>
+				<interior color="ffcc00" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>958 101 1050 137</position>
+			</node>
+			<node id="MinVolSet">
+				<name>MinVolSet</name>
+				<interior color="00ff00" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>965 23 1041 59</position>
+			</node>
+			<node id="VentMach">
+				<name>VentMach</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>886 66 962 102</position>
+			</node>
+			<node id="VentTube">
+				<name>VentTube</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>862 125 938 161</position>
+			</node>
+			<node id="VentLung">
+				<name>VentLung</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>741 142 817 178</position>
+			</node>
+			<node id="VentAlv">
+				<name>VentAlv</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>644 160 720 196</position>
+			</node>
+			<node id="ArtCO2">
+				<name>ArtCO2</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>509 217 585 253</position>
+			</node>
+			<node id="TPR">
+				<name>TPR</name>
+				<interior color="00ff00" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>245 221 321 257</position>
+			</node>
+			<node id="Hypovolemia">
+				<name>Hypovolemia</name>
+				<interior color="ffcc00" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>38 23 135 59</position>
+			</node>
+			<node id="LVFailure">
+				<name>LVFailure</name>
+				<interior color="ffcc00" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>170 23 246 59</position>
+			</node>
+			<node id="StrokeVolume">
+				<name>StrokeVolume</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>158 96 259 132</position>
+			</node>
+			<node id="InsuffAnesth">
+				<name>InsuffAnesth</name>
+				<interior color="ffcc00" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>358 190 449 226</position>
+			</node>
+			<node id="PulmEmbolus">
+				<name>PulmEmbolus</name>
+				<interior color="ffcc00" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>475 23 578 59</position>
+			</node>
+			<node id="Shunt">
+				<name>Shunt</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>538 96 614 132</position>
+			</node>
+			<node id="FiO2">
+				<name>FiO2</name>
+				<interior color="00ff00" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>618 96 694 132</position>
+			</node>
+			<node id="PVSat">
+				<name>PVSat</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>547 151 623 187</position>
+			</node>
+			<node id="SaO2">
+				<name>SaO2</name>
+				<interior color="00ff00" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>461 179 537 215</position>
+			</node>
+			<node id="Catechol">
+				<name>Catechol</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>365 265 441 301</position>
+			</node>
+			<node id="HR">
+				<name>HR</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>263 308 339 344</position>
+			</node>
+			<node id="CO">
+				<name>CO</name>
+				<interior color="00ff00" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>164 344 240 380</position>
+			</node>
+			<node id="BP">
+				<name>BP</name>
+				<interior color="00ff00" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>18 430 94 466</position>
+			</node>
+			<node id="LVEDVolume">
+				<name>LVEDVolume</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>38 96 135 132</position>
+			</node>
+			<node id="CVP">
+				<name>CVP</name>
+				<interior color="00ff00" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>13 170 89 206</position>
+			</node>
+			<node id="ErrCauter">
+				<name>ErrCauter</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>246 374 322 410</position>
+			</node>
+			<node id="ErrLowOutput">
+				<name>ErrLowOutput</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>406 374 504 410</position>
+			</node>
+			<node id="ExpCO2">
+				<name>ExpCO2</name>
+				<interior color="00ff00" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>608 250 684 286</position>
+			</node>
+			<node id="HRBP">
+				<name>HRBP</name>
+				<interior color="00ff00" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>403 429 479 465</position>
+			</node>
+			<node id="HREKG">
+				<name>HREKG</name>
+				<interior color="00ff00" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>151 430 227 465</position>
+			</node>
+			<node id="HRSat">
+				<name>HRSat</name>
+				<interior color="00ff00" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>314 430 390 466</position>
+			</node>
+			<node id="History">
+				<name>History</name>
+				<interior color="00ff00" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>278 96 354 132</position>
+			</node>
+			<node id="MinVol">
+				<name>MinVol</name>
+				<interior color="00ff00" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>711 250 787 286</position>
+			</node>
+			<node id="PAP">
+				<name>PAP</name>
+				<interior color="00ff00" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>458 96 534 132</position>
+			</node>
+			<node id="PCWP">
+				<name>PCWP</name>
+				<interior color="00ff00" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>103 170 179 206</position>
+			</node>
+			<node id="Press">
+				<name>Press</name>
+				<interior color="00ff00" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>851 250 927 286</position>
+			</node>
+			<textbox>
+				<caption>The Alarm network has been developed for on-line monitoring of patients in intensive care units and generously contributed to the community by Ingo Beinlich and his collaborators.\nThe model has first appeared in the following paper:\nI.A. Beinlich, H.J. Suermondt, R.M. Chavez and G.F. Cooper, The ALARM monitoring system: A case study with two probabilistic inference techniques for belief networks, Proceedings of the Second European Conference on Artificial Intelligence in Medical Care, pages 247-256, Springer-Verlag, Berlin, 1989</caption>
+				<font color="000000" name="MS Sans Serif" size="10" bold="true" />
+				<position>519 300 1042 471</position>
+			</textbox>
+		</genie>
+	</extensions>
+</smile>

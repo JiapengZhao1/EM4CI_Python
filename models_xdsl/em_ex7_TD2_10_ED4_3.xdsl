@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This file was created by ACADEMIC version of SMILE -->
+<smile version="1.0" id="Unnamed" numsamples="10000" discsamples="10000">
+	<nodes>
+		<cpt id="U1">
+			<state id="a" />
+			<state id="b" />
+			<state id="c" />
+			<state id="d" />
+			<probabilities>0.2237849790582778 0.6567329445789224 0.1189836972063429 0.0004983791564566808</probabilities>
+		</cpt>
+		<cpt id="U2">
+			<state id="a" />
+			<state id="b" />
+			<state id="c" />
+			<state id="d" />
+			<probabilities>0.9922836388443229 0.007716361021706247 1.339708670339581e-10 4.040652685165807e-21</probabilities>
+		</cpt>
+		<cpt id="U3">
+			<state id="a" />
+			<state id="b" />
+			<state id="c" />
+			<state id="d" />
+			<probabilities>2.481249599944897e-05 2.177395386004672e-134 0.9671594890230903 0.03281569848091016</probabilities>
+		</cpt>
+		<cpt id="Z3">
+			<state id="a" />
+			<state id="b" />
+			<parents>U3</parents>
+			<probabilities>0.9977875792494617 0.002212420750538369 1.721088014279456e-50 1 3.59411634067894e-43 1 0.9689699598966487 0.03103004010335118</probabilities>
+		</cpt>
+		<cpt id="X2">
+			<state id="a" />
+			<state id="b" />
+			<parents>U1 U2 Z3</parents>
+			<probabilities>0.002438370362063122 0.9975616296379369 0.9647286123095995 0.03527138769040054 7.04468974776563e-10 0.999999999295531 0.999897174144725 0.000102825855275155 0.9999999907100067 9.289993392121686e-09 1.595193363405649e-06 0.9999984048066366 0.9999999999999998 7.566542906445872e-17 0.9999999129858123 8.701418778397844e-08 7.503536856190795e-06 0.9999924964631438 0.1701427014876044 0.8298572985123956 0.9999999992952473 7.047527947271302e-10 0.9999998590576166 1.40942383492176e-07 1.630903361551904e-05 0.9999836909663845 0 1 0.002327039117803887 0.997672960882196 0.9999999990762967 9.237032334614751e-10 0.9995168368856755 0.0004831631143244046 1 1.579827984589603e-73 0.0001947114749308164 0.9998052885250691 1.925097240023418e-22 1 0.3885867586430771 0.6114132413569229 6.420681819118962e-11 0.999999999935793 0.0001236118536625763 0.9998763881463375 7.191918751220409e-11 0.9999999999280809 0.7772699351164338 0.2227300648835662 0.01382467415087284 0.9861753258491271 0.9999999994676478 5.323521600273464e-10 2.83225546898931e-69 1 1 1.964528711010427e-46 0.9992500340035037 0.0007499659964964083 1.979390609800529e-05 0.999980206093902 0.997516334298256 0.002483665701743943</probabilities>
+		</cpt>
+		<cpt id="X1">
+			<state id="a" />
+			<state id="b" />
+			<parents>U1 X2</parents>
+			<probabilities>0.9999999999970132 2.986988380814023e-12 1 3.227170329324928e-29 1.591022286392835e-18 1 1 3.252105261701155e-27 1 0 0.9999999997884123 2.115876759387428e-10 0.0001700549111933251 0.9998299450888065 1.155952180052114e-07 0.9999998844047819</probabilities>
+		</cpt>
+		<cpt id="Z1">
+			<state id="a" />
+			<state id="b" />
+			<parents>U3 X1</parents>
+			<probabilities>5.185253430227724e-18 1 1 6.229592661417078e-129 0.0002346299962025681 0.9997653700037974 1.053621685955449e-16 1 3.504631779859286e-82 1 0.9997463813012162 0.0002536186987837888 2.930324950941583e-35 1 0.999999995035958 4.96404191214739e-09</probabilities>
+		</cpt>
+		<cpt id="Z2">
+			<state id="a" />
+			<state id="b" />
+			<parents>U2 Z3</parents>
+			<probabilities>1.396650192806583e-29 1 0.9999877895827418 1.221041725809623e-05 1.135095248946699e-11 0.9999999999886491 0.0006261411070164487 0.9993738588929836 1 2.965434181503747e-145 2.172836997302173e-29 0.9999999999999999 0.9999998921504544 1.078495455878875e-07 0.9999999999999999 6.668880733382915e-18</probabilities>
+		</cpt>
+		<cpt id="Y">
+			<state id="a" />
+			<state id="b" />
+			<parents>Z1 Z2 X2</parents>
+			<probabilities>0.9999999999999999 2.751119907454751e-17 0.999076153188707 0.0009238468112929726 0.4479549935968871 0.5520450064031128 6.589028955031058e-06 0.999993410971045 5.795818563334693e-05 0.9999420418143666 0.6731136813736107 0.3268863186263893 0.02651671931542331 0.9734832806845767 2.82002343287686e-05 0.9999717997656712</probabilities>
+		</cpt>
+	</nodes>
+	<extensions>
+		<genie version="1.0" app="SMILE_ACADEMIC 2.2.0@40eb97e8a55a" name="Unnamed">
+			<node id="X1">
+				<name>X1</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>100 100 185 155</position>
+			</node>
+			<node id="X2">
+				<name>X2</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>100 100 185 155</position>
+			</node>
+			<node id="Z1">
+				<name>Z1</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>120 80 205 135</position>
+			</node>
+			<node id="Z2">
+				<name>Z2</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>120 81 205 136</position>
+			</node>
+			<node id="Z3">
+				<name>Z3</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>120 82 205 137</position>
+			</node>
+			<node id="Y">
+				<name>Y</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>50 50 135 105</position>
+			</node>
+			<node id="U1">
+				<name>U1</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>85 50 170 105</position>
+			</node>
+			<node id="U2">
+				<name>U2</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>120 50 205 105</position>
+			</node>
+			<node id="U3">
+				<name>U3</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>120 50 205 105</position>
+			</node>
+		</genie>
+	</extensions>
+</smile>

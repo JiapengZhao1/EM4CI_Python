@@ -1,0 +1,707 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This file was created by ACADEMIC version of SMILE -->
+<smile version="1.0" id="A" numsamples="1000" discsamples="10000">
+	<nodes>
+		<cpt id="NODE000">
+			<state id="STATE00" />
+			<state id="STATE01" />
+			<probabilities>1 2.649291343422806e-18</probabilities>
+		</cpt>
+		<cpt id="NODE001">
+			<state id="STATE00" />
+			<state id="STATE01" />
+			<probabilities>0.999433030677786 0.0005669693222138089</probabilities>
+		</cpt>
+		<cpt id="NODE002">
+			<state id="STATE00" />
+			<state id="STATE01" />
+			<probabilities>5.736979006417777e-10 0.999999999426302</probabilities>
+		</cpt>
+		<cpt id="NODE003">
+			<state id="STATE00" />
+			<state id="STATE01" />
+			<parents>NODE000</parents>
+			<probabilities>0.9999999999143498 8.565006666878335e-11 1 2.203542256390755e-18</probabilities>
+		</cpt>
+		<cpt id="NODE004">
+			<state id="STATE00" />
+			<state id="STATE01" />
+			<probabilities>5.393092637061436e-05 0.9999460690736294</probabilities>
+		</cpt>
+		<cpt id="NODE005">
+			<state id="STATE00" />
+			<state id="STATE01" />
+			<probabilities>1 9.183327761175558e-29</probabilities>
+		</cpt>
+		<cpt id="NODE006">
+			<state id="STATE00" />
+			<state id="STATE01" />
+			<parents>NODE000</parents>
+			<probabilities>0.9985389172812336 0.00146108271876647 0.9999190545494063 8.094545059368531e-05</probabilities>
+		</cpt>
+		<cpt id="NODE007">
+			<state id="STATE00" />
+			<state id="STATE01" />
+			<probabilities>1 1.298952901490946e-57</probabilities>
+		</cpt>
+		<cpt id="NODE008">
+			<state id="STATE00" />
+			<state id="STATE01" />
+			<probabilities>5.330946990118958e-08 0.9999999466905302</probabilities>
+		</cpt>
+		<cpt id="NODE009">
+			<state id="STATE00" />
+			<state id="STATE01" />
+			<probabilities>0.27272728 0.72727275</probabilities>
+		</cpt>
+		<cpt id="NODE010">
+			<state id="STATE00" />
+			<state id="STATE01" />
+			<parents>NODE000 NODE005 NODE007 NODE008</parents>
+			<probabilities>0.9999999943643605 5.635639417439455e-09 3.364873474443439e-14 0.9999999999999664 5.325937527222754e-07 0.9999994674062471 0.9999999999998644 1.356352675962801e-13 0.8310506839025654 0.1689493160974345 1 0 0.0001147902656852079 0.9998852097343148 1 6.602846795374248e-152 1 0 1 1.604148470420521e-48 0.9999999768849467 2.311505332211746e-08 0.9847492659610887 0.01525073403891129 1 1.212607979137494e-49 9.230206033810496e-13 0.9999999999990771 7.999849164166348e-15 0.999999999999992 0.9993859804867911 0.0006140195132090044</probabilities>
+		</cpt>
+		<cpt id="NODE011">
+			<state id="STATE00" />
+			<state id="STATE01" />
+			<parents>NODE004 NODE007</parents>
+			<probabilities>0.1050285984248581 0.894971401575142 1.505191967406936e-49 1 6.253019241882386e-08 0.9999999374698074 0.000574536246036877 0.999425463753963</probabilities>
+		</cpt>
+		<cpt id="NODE012">
+			<state id="STATE00" />
+			<state id="STATE01" />
+			<parents>NODE010</parents>
+			<probabilities>0.25 0.75 0.375 0.625</probabilities>
+		</cpt>
+		<cpt id="NODE013">
+			<state id="STATE00" />
+			<state id="STATE01" />
+			<parents>NODE004</parents>
+			<probabilities>1 1.011761157629187e-40 0.9999999999999999 1.12512451517946e-16</probabilities>
+		</cpt>
+		<cpt id="NODE014">
+			<state id="STATE00" />
+			<state id="STATE01" />
+			<parents>NODE005</parents>
+			<probabilities>8.661860932401276e-11 0.9999999999133813 1 7.249321168934233e-33</probabilities>
+		</cpt>
+		<cpt id="NODE015">
+			<state id="STATE00" />
+			<state id="STATE01" />
+			<parents>NODE005 NODE012</parents>
+			<probabilities>2.877830122453442e-05 0.9999712216987755 1 3.636933855922154e-19 0.001978026258457938 0.998021973741542 0.9999999999999954 4.543879308532188e-15</probabilities>
+		</cpt>
+		<cpt id="NODE016">
+			<state id="STATE00" />
+			<state id="STATE01" />
+			<parents>NODE005 NODE012</parents>
+			<probabilities>0.9855685493716227 0.0144314506283772 0.9882082927206143 0.01179170727938578 0.2058641366855929 0.7941358633144071 0.9989986333118692 0.001001366688130722</probabilities>
+		</cpt>
+		<cpt id="NODE017">
+			<state id="STATE00" />
+			<state id="STATE01" />
+			<parents>NODE014</parents>
+			<probabilities>0.375 0.625 0.60000002 0.40000001</probabilities>
+		</cpt>
+		<cpt id="NODE018">
+			<state id="STATE00" />
+			<state id="STATE01" />
+			<probabilities>0.61538464 0.38461539</probabilities>
+		</cpt>
+		<cpt id="NODE019">
+			<state id="STATE00" />
+			<state id="STATE01" />
+			<parents>NODE011 NODE015 NODE016</parents>
+			<probabilities>0.81818181 0.18181819 0.40000001 0.60000002 0.77777779 0.22222222 0.42857143 0.5714286 0.5384615699999999 0.46153846 0.23076923 0.76923078 0.5 0.5 0.38461539 0.61538464</probabilities>
+		</cpt>
+		<cpt id="NODE020">
+			<state id="STATE00" />
+			<state id="STATE01" />
+			<parents>NODE001 NODE017</parents>
+			<probabilities>0.999999989928871 1.00711291774289e-08 0.9964126751958424 0.003587324804157507 5.340557007542037e-11 0.9999999999465944 4.044484402571723e-06 0.9999959555155974</probabilities>
+		</cpt>
+		<cpt id="NODE021">
+			<state id="STATE00" />
+			<state id="STATE01" />
+			<probabilities>3.492194191885722e-18 1</probabilities>
+		</cpt>
+		<cpt id="NODE022">
+			<state id="STATE00" />
+			<state id="STATE01" />
+			<parents>NODE002 NODE013 NODE017</parents>
+			<probabilities>1.354320038681998e-21 1 2.825214610336967e-12 0.9999999999971747 0.9997834875256493 0.0002165124743508258 4.596818514530281e-26 1 0.999999999998427 1.572998157743493e-12 0.9793805414539304 0.02061945854606948 0.9999999999999999 7.103216547301834e-19 0.5109784482346673 0.4890215517653327</probabilities>
+		</cpt>
+		<cpt id="NODE023">
+			<state id="STATE00" />
+			<state id="STATE01" />
+			<parents>NODE007 NODE018</parents>
+			<probabilities>7.654776103924091e-45 0.9999999999999999 0.9983382072576927 0.001661792742307206 7.962752896888384e-08 0.999999920372471 1 5.7835266080472e-74</probabilities>
+		</cpt>
+		<cpt id="NODE024">
+			<state id="STATE00" />
+			<state id="STATE01" />
+			<parents>NODE001 NODE004 NODE008 NODE017</parents>
+			<probabilities>0.1842358315478704 0.8157641684521296 1 6.5184749454767e-43 0.005426506283791641 0.9945734937162084 0.4282883512086145 0.5717116487913856 8.172277724907809e-104 1 0.1181880321643465 0.8818119678356536 3.797236340035662e-11 0.9999999999620276 0.3569411797789076 0.6430588202210925 9.046770505837434e-18 1 1 2.950052215500661e-21 1.911797662071758e-05 0.9999808820233793 0.04763112876353678 0.9523688712364632 1.418002831913414e-15 0.9999999999999986 1.290273051983638e-29 1 2.050446215321196e-05 0.9999794955378467 0.9997516132619554 0.0002483867380445659</probabilities>
+		</cpt>
+		<cpt id="NODE025">
+			<state id="STATE00" />
+			<state id="STATE01" />
+			<parents>NODE011 NODE017</parents>
+			<probabilities>0.40000001 0.60000002 0.16666667 0.83333331 0.5 0.5 0.42857143 0.5714286</probabilities>
+		</cpt>
+		<cpt id="NODE026">
+			<state id="STATE00" />
+			<state id="STATE01" />
+			<parents>NODE014</parents>
+			<probabilities>0.40000001 0.60000002 0.54545456 0.45454547</probabilities>
+		</cpt>
+		<cpt id="NODE027">
+			<state id="STATE00" />
+			<state id="STATE01" />
+			<parents>NODE011</parents>
+			<probabilities>0.80000001 0.2 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="NODE028">
+			<state id="STATE00" />
+			<state id="STATE01" />
+			<parents>NODE000 NODE013 NODE024</parents>
+			<probabilities>0.9999999999999999 6.992426223604203e-48 0.9999999999999998 1.593501956398497e-16 1 4.337920754961994e-26 1.554754037286519e-11 0.9999999999844524 0.002078529321967046 0.9979214706780329 1 2.89039383616808e-40 0.9999999672286486 3.277135152962835e-08 0.999963777099899 3.622290010101811e-05</probabilities>
+		</cpt>
+		<cpt id="NODE029">
+			<state id="STATE00" />
+			<state id="STATE01" />
+			<parents>NODE001 NODE008 NODE017 NODE023</parents>
+			<probabilities>2.615243217906552e-19 1 0.9999983738844626 1.626115537346205e-06 1 3.954454980528038e-35 0.6354521515208406 0.3645478484791595 6.161302178190745e-22 1 1 5.21555159204062e-38 0.4175711481093461 0.5824288518906539 0.0008431408022341552 0.9991568591977659 1 6.017809361224079e-28 0.999999998105371 1.894629062212982e-09 9.311388157589663e-10 0.9999999990688613 1 7.027702470652684e-17 0.01440897948199588 0.9855910205180042 0.99999999531484 4.68516015318806e-09 3.866674273555446e-12 0.9999999999961332 0.009057370183200389 0.9909426298167996</probabilities>
+		</cpt>
+		<cpt id="NODE030">
+			<state id="STATE00" />
+			<state id="STATE01" />
+			<parents>NODE006 NODE010 NODE011 NODE020 NODE029</parents>
+			<probabilities>0.55555558 0.44444445 0.83333331 0.16666667 0.54545456 0.45454547 0.75 0.25 0.5 0.5 0.5 0.5 0.66666669 0.33333334 0.66666669 0.33333334 0.5 0.5 0.625 0.375 0.60000002 0.40000001 0.5 0.5 0.54545456 0.45454547 0.625 0.375 0.53333336 0.46666667 0.22222222 0.77777779 0.53333336 0.46666667 0.5625 0.4375 0.4375 0.5625 0.80000001 0.2 0.22222222 0.77777779 0.35714287 0.64285713 0.375 0.625 0.625 0.375 0.54545456 0.45454547 0.35714287 0.64285713 0.4375 0.5625 0.42857143 0.5714286 0.66666669 0.33333334 0.36363637 0.63636363 0.5 0.5 0.4375 0.5625</probabilities>
+		</cpt>
+		<cpt id="NODE031">
+			<state id="STATE00" />
+			<state id="STATE01" />
+			<parents>NODE008 NODE028</parents>
+			<probabilities>6.756190119381208e-14 0.9999999999999323 1.685138105982414e-09 0.9999999983148619 0.004358991167649666 0.9956410088323504 0.9999999997454235 2.545766054845594e-10</probabilities>
+		</cpt>
+		<cpt id="NODE032">
+			<state id="STATE00" />
+			<state id="STATE01" />
+			<parents>NODE015 NODE025</parents>
+			<probabilities>0.47058824 0.52941179 0.45454547 0.54545456 0.58333331 0.41666666 0.30000001 0.69999999</probabilities>
+		</cpt>
+		<cpt id="NODE033">
+			<state id="STATE00" />
+			<state id="STATE01" />
+			<parents>NODE006 NODE007</parents>
+			<probabilities>3.555411379790988e-31 1 6.357228544203304e-16 0.9999999999999994 0.9967135508867956 0.003286449113204351 0.9999190056748307 8.099432516917082e-05</probabilities>
+		</cpt>
+		<cpt id="NODE034">
+			<state id="STATE00" />
+			<state id="STATE01" />
+			<parents>NODE012 NODE029</parents>
+			<probabilities>0.2857143 0.71428573 0.60000002 0.40000001 0.80000001 0.2 0.77777779 0.22222222</probabilities>
+		</cpt>
+		<cpt id="NODE035">
+			<state id="STATE00" />
+			<state id="STATE01" />
+			<parents>NODE012</parents>
+			<probabilities>0.44444445 0.55555558 0.41666666 0.58333331</probabilities>
+		</cpt>
+		<cpt id="NODE036">
+			<state id="STATE00" />
+			<state id="STATE01" />
+			<parents>NODE000 NODE003 NODE017 NODE024</parents>
+			<probabilities>0.9999790406516199 2.09593483801172e-05 3.985785453272217e-06 0.9999960142145466 3.52769880526425e-17 1 0.0001227513629486344 0.9998772486370513 0.0001319023439531409 0.9998680976560469 0.06748406669746937 0.9325159333025306 1 1.196110673032817e-28 0.9996656013335977 0.000334398666402185 0.01637942878033449 0.9836205712196655 1.747595044741761e-95 1 0.123569404079855 0.8764305959201449 0.03614623712553779 0.9638537628744622 0.9847229963425322 0.01527700365746779 0.9999735657889839 2.643421101622163e-05 6.409604930614473e-05 0.9999359039506939 3.094085757505567e-05 0.9999690591424251</probabilities>
+		</cpt>
+		<cpt id="NODE037">
+			<state id="STATE00" />
+			<state id="STATE01" />
+			<parents>NODE002 NODE028 NODE034 NODE036</parents>
+			<probabilities>0.8322227338421346 0.1677772661578652 0.02223987626205883 0.9777601237379412 5.910892425973508e-12 0.9999999999940891 0.9999999652175634 3.478243666628322e-08 0.9999999999967844 3.215620762784612e-12 0.3441650203171691 0.6558349796828309 0.9887059340519919 0.01129406594800824 1 1.654454867515951e-23 0.9999500078214071 4.999217859305645e-05 0.9999999993678171 6.32182725277053e-10 2.911692776081682e-18 1 1.67145398283364e-14 0.9999999999999833 0.007187525750053715 0.9928124742499463 0.9999981230568608 1.876943139302141e-06 2.671054133370824e-12 0.9999999999973289 0.999776586339948 0.000223413660051903</probabilities>
+		</cpt>
+		<cpt id="NODE038">
+			<state id="STATE00" />
+			<state id="STATE01" />
+			<parents>NODE006 NODE008</parents>
+			<probabilities>0.9773841683842421 0.02261583161575782 0.4045506404045717 0.5954493595954282 8.647927438546843e-319 1 0.5739980161558998 0.4260019838441</probabilities>
+		</cpt>
+		<cpt id="NODE039">
+			<state id="STATE00" />
+			<state id="STATE01" />
+			<parents>NODE008 NODE011 NODE012 NODE032 NODE035</parents>
+			<probabilities>0.8995708012271255 0.1004291987728745 7.055995592785225e-100 1 0.9999968759470328 3.124052967199042e-06 0.3200536117920021 0.6799463882079978 0.9936088709134185 0.006391129086581424 1.030436738203244e-05 0.999989695632618 0.9999999061977963 9.38022036921603e-08 0.0008178312123807986 0.9991821687876192 0.9993002064760137 0.0006997935239862973 0.07855668479762823 0.9214433152023717 0.9999999999852047 1.479518316045665e-11 0.9999969975127642 3.002487235873418e-06 7.788378583020261e-05 0.9999221162141697 5.165139580314552e-18 1 0.9999999880918686 1.190813134397523e-08 0.999999999999998 2.126357804315425e-15 0.07952552077153414 0.9204744792284658 0.9999999999999999 4.91773000365641e-58 0.002624005861221804 0.9973759941387781 0.02443695309344674 0.9755630469065533 0.7912916770667476 0.2087083229332523 0.9999956421552149 4.357844785053028e-06 3.358930956057776e-18 1 1.42518806305196e-237 1 1 6.646041412007771e-21 1.348812706972914e-09 0.9999999986511873 1 7.31991627208526e-18 0.9998049994384778 0.0001950005615223239 1 9.371457425388377e-20 1.759854185553163e-29 1 0.9999999821071622 1.789283781992622e-08 0.9999998316471873 1.68352812633567e-07</probabilities>
+		</cpt>
+		<cpt id="NODE040">
+			<state id="STATE00" />
+			<state id="STATE01" />
+			<parents>NODE021 NODE029 NODE036</parents>
+			<probabilities>0.0004413109618480404 0.9995586890381519 0.9950281953049721 0.004971804695027772 1 1.067454006248631e-109 7.231088938412305e-16 0.9999999999999993 0.2982285470249901 0.70177145297501 0.9999999844046936 1.559530639636663e-08 0.008874936358873362 0.9911250636411266 1.335117850706803e-69 1</probabilities>
+		</cpt>
+		<cpt id="NODE041">
+			<state id="STATE00" />
+			<state id="STATE01" />
+			<parents>NODE008</parents>
+			<probabilities>2.934805414472863e-55 1 3.82492900308705e-07 0.9999996175070996</probabilities>
+		</cpt>
+		<cpt id="NODE042">
+			<state id="STATE00" />
+			<state id="STATE01" />
+			<parents>NODE004 NODE029</parents>
+			<probabilities>2.837587490725332e-184 1 1.30778938967484e-10 0.9999999998692209 1.30498989106978e-45 1 0.000147421311565152 0.9998525786884348</probabilities>
+		</cpt>
+		<cpt id="NODE043">
+			<state id="STATE00" />
+			<state id="STATE01" />
+			<parents>NODE021</parents>
+			<probabilities>0.9927654549036524 0.00723454509634757 2.944572577896946e-29 1</probabilities>
+		</cpt>
+		<cpt id="NODE044">
+			<state id="STATE00" />
+			<state id="STATE01" />
+			<parents>NODE011 NODE041</parents>
+			<probabilities>0.4375 0.5625 0.33333334 0.66666669 0.25 0.75 0.60000002 0.40000001</probabilities>
+		</cpt>
+		<cpt id="NODE045">
+			<state id="STATE00" />
+			<state id="STATE01" />
+			<parents>NODE004 NODE023</parents>
+			<probabilities>0.9999999999966951 3.304834813776009e-12 0.2089203225086448 0.7910796774913552 0.900680208397788 0.0993197916022121 1.3914024827223e-05 0.9999860859751728</probabilities>
+		</cpt>
+		<cpt id="NODE046">
+			<state id="STATE00" />
+			<state id="STATE01" />
+			<probabilities>0.60000002 0.40000001</probabilities>
+		</cpt>
+		<cpt id="NODE047">
+			<state id="STATE00" />
+			<state id="STATE01" />
+			<parents>NODE003 NODE022 NODE026 NODE027 NODE036 NODE043 NODE045</parents>
+			<probabilities>0.76923078 0.23076923 0.5 0.5 0.45454547 0.54545456 0.23076923 0.76923078 0.45454547 0.54545456 0.66666669 0.33333334 0.47058824 0.52941179 0.58823532 0.41176471 0.81818181 0.18181819 0.375 0.625 0.46666667 0.53333336 0.60000002 0.40000001 0.33333334 0.66666669 0.71428573 0.2857143 0.60000002 0.40000001 0.44444445 0.55555558 0.58333331 0.41666666 0.5 0.5 0.40000001 0.60000002 0.625 0.375 0.625 0.375 0.46153846 0.5384615699999999 0.36363637 0.63636363 0.69230771 0.30769232 0.18181819 0.81818181 0.36363637 0.63636363 0.46666667 0.53333336 0.80000001 0.2 0.23076923 0.76923078 0.42857143 0.5714286 0.625 0.375 0.40000001 0.60000002 0.5 0.5 0.23076923 0.76923078 0.18181819 0.81818181 0.40000001 0.60000002 0.45454547 0.54545456 0.36363637 0.63636363 0.375 0.625 0.53333336 0.46666667 0.52941179 0.47058824 0.375 0.625 0.58333331 0.41666666 0.33333334 0.66666669 0.64285713 0.35714287 0.41176471 0.58823532 0.375 0.625 0.5384615699999999 0.46153846 0.60000002 0.40000001 0.45454547 0.54545456 0.54545456 0.45454547 0.55555558 0.44444445 0.64285713 0.35714287 0.58333331 0.41666666 0.33333334 0.66666669 0.55555558 0.44444445 0.61538464 0.38461539 0.5 0.5 0.69230771 0.30769232 0.71428573 0.2857143 0.52941179 0.47058824 0.30000001 0.69999999 0.2 0.80000001 0.5 0.5 0.33333334 0.66666669 0.22222222 0.77777779 0.69999999 0.30000001 0.52941179 0.47058824 0.66666669 0.33333334 0.18181819 0.81818181 0.66666669 0.33333334 0.72727275 0.27272728 0.60000002 0.40000001 0.625 0.375 0.75 0.25 0.5 0.5 0.375 0.625 0.83333331 0.16666667 0.75 0.25 0.60000002 0.40000001 0.46153846 0.5384615699999999 0.2857143 0.71428573 0.33333334 0.66666669 0.38461539 0.61538464 0.66666669 0.33333334 0.72727275 0.27272728 0.45454547 0.54545456 0.46153846 0.5384615699999999 0.33333334 0.66666669 0.5 0.5 0.46666667 0.53333336 0.61538464 0.38461539 0.33333334 0.66666669 0.44444445 0.55555558 0.55555558 0.44444445 0.54545456 0.45454547 0.40000001 0.60000002 0.5 0.5 0.25 0.75 0.42857143 0.5714286 0.5 0.5 0.42857143 0.5714286 0.41176471 0.58823532 0.33333334 0.66666669 0.41176471 0.58823532 0.52941179 0.47058824 0.33333334 0.66666669 0.25 0.75 0.60000002 0.40000001 0.83333331 0.16666667 0.55555558 0.44444445 0.71428573 0.2857143 0.33333334 0.66666669 0.66666669 0.33333334 0.58333331 0.41666666 0.42857143 0.5714286 0.5 0.5 0.38461539 0.61538464 0.69230771 0.30769232 0.36363637 0.63636363 0.30000001 0.69999999 0.64285713 0.35714287 0.22222222 0.77777779 0.5263158100000001 0.47368422 0.5625 0.4375 0.66666669 0.33333334 0.5 0.5 0.30769232 0.69230771</probabilities>
+		</cpt>
+		<cpt id="NODE048">
+			<state id="STATE00" />
+			<state id="STATE01" />
+			<parents>NODE010 NODE019 NODE021 NODE026</parents>
+			<probabilities>3.406795390913006e-08 0.9999999659320461 2.564620670236954e-10 0.999999999743538 1.720739808223364e-41 1 0.7834066437457599 0.2165933562542402 0.4436850788855781 0.5563149211144219 2.515589276161012e-25 1 1 1.538655000408265e-132 1.566074616459671e-15 0.9999999999999984 5.972553379377323e-12 0.9999999999940273 1 0 0.999999999999999 9.901660910182656e-16 1 4.718715817858854e-49 1 3.110990195662672e-52 0.0580478992416403 0.9419521007583597 0.9999999999999998 1.561698722500062e-16 0.9999999755769382 2.442306180741048e-08</probabilities>
+		</cpt>
+		<cpt id="NODE049">
+			<state id="STATE00" />
+			<state id="STATE01" />
+			<parents>NODE009 NODE022 NODE041</parents>
+			<probabilities>0.80000001 0.2 0.58333331 0.41666666 0.71428573 0.2857143 0.55555558 0.44444445 0.47368422 0.5263158100000001 0.5 0.5 0.18181819 0.81818181 0.22222222 0.77777779</probabilities>
+		</cpt>
+		<cpt id="NODE050">
+			<state id="STATE00" />
+			<state id="STATE01" />
+			<parents>NODE015 NODE024 NODE037 NODE041 NODE047 NODE049</parents>
+			<probabilities>0.33333334 0.66666669 0.66666669 0.33333334 0.66666669 0.33333334 0.46666667 0.53333336 0.375 0.625 0.58823532 0.41176471 0.2857143 0.71428573 0.23076923 0.76923078 0.75 0.25 0.33333334 0.66666669 0.52941179 0.47058824 0.25 0.75 0.40000001 0.60000002 0.44444445 0.55555558 0.47058824 0.52941179 0.55555558 0.44444445 0.46666667 0.53333336 0.33333334 0.66666669 0.375 0.625 0.5714286 0.42857143 0.5 0.5 0.5 0.5 0.60000002 0.40000001 0.69999999 0.30000001 0.40000001 0.60000002 0.625 0.375 0.5714286 0.42857143 0.44444445 0.55555558 0.375 0.625 0.33333334 0.66666669 0.5 0.5 0.5384615699999999 0.46153846 0.42857143 0.5714286 0.33333334 0.66666669 0.75 0.25 0.46153846 0.5384615699999999 0.61538464 0.38461539 0.53333336 0.46666667 0.5384615699999999 0.46153846 0.33333334 0.66666669 0.5 0.5 0.40000001 0.60000002 0.42857143 0.5714286 0.40000001 0.60000002 0.60000002 0.40000001 0.5 0.5 0.72727275 0.27272728 0.46153846 0.5384615699999999 0.72727275 0.27272728 0.47058824 0.52941179 0.42857143 0.5714286 0.55555558 0.44444445 0.42857143 0.5714286 0.4375 0.5625 0.42857143 0.5714286 0.5 0.5 0.71428573 0.2857143 0.46153846 0.5384615699999999 0.64285713 0.35714287 0.5 0.5 0.30000001 0.69999999 0.83333331 0.16666667 0.64285713 0.35714287 0.64285713 0.35714287</probabilities>
+		</cpt>
+		<cpt id="NODE051">
+			<state id="STATE00" />
+			<state id="STATE01" />
+			<parents>NODE008 NODE013 NODE015 NODE024 NODE039 NODE047 NODE050</parents>
+			<probabilities>0.9993445239817262 0.0006554760182736647 0.2214884861804042 0.7785115138195956 0.004015630831350309 0.9959843691686497 0.9999999906780643 9.321935590262767e-09 5.813289568704656e-08 0.9999999418671043 8.629078712924602e-29 1 0.9999999999999999 4.521196428155838e-103 1.585563252663715e-30 0.9999999999999999 0.9999999999999999 1.703779932157424e-21 2.036228437646853e-109 1 0.9999882233920716 1.17766079283394e-05 0.2297407813216431 0.7702592186783569 3.07676785204525e-05 0.9999692323214795 0.0006614875766214375 0.9993385124233787 0.9219307384228179 0.07806926157718228 0.0002809714965089391 0.9997190285034911 1 1.415005113762859e-26 0.9975187408099554 0.002481259190044556 0.9878976983570273 0.01210230164297266 0.9999999552201136 4.477988635598848e-08 1 1.591811206477582e-158 5.807143338176523e-227 1 0.7799032514505051 0.220096748549495 1 7.939467229972066e-45 0.05480317192816412 0.9451968280718359 0.9996977753330307 0.0003022246669691864 3.164421355911966e-16 0.9999999999999997 2.499690081075478e-18 1 1 3.961148636448817e-27 1 1.441811068189487e-17 0.9999991678791037 8.321208961667834e-07 0.9999999999438168 5.6183192153737e-11 1 5.061573500226346e-46 0.9999999999561417 4.385829308349351e-11 1 2.494171282112782e-23 0.9999999999999999 0 5.544997974092655e-15 0.9999999999999944 0.9995901114171466 0.0004098885828534686 0.6906576557914829 0.3093423442085172 0.03099970283127244 0.9690002971687276 0.9999999999999999 1.370910184674326e-31 0.9999754883466698 2.451165333002492e-05 0.0002903662489497811 0.9997096337510503 9.554663344494065e-32 1 6.992925953275671e-06 0.9999930070740467 0.9999999998833473 1.16652695222784e-10 0.8921863486935444 0.1078136513064557 8.758054200390755e-28 1 1 7.285556486668904e-118 1.049955356656262e-31 1 5.67436951223883e-29 1 1 4.473664054534674e-28 1.699424247182833e-05 0.9999830057575283 0.9999999999999999 2.345226238196144e-34 1 3.161861543582534e-39 0.9999992808784708 7.191215292494238e-07 2.506462199592806e-186 0.9999999999999999 0.01456836088457766 0.9854316391154223 1.941942552107872e-18 1 0.05958504420584822 0.9404149557941518 1 1.81080355048318e-100 1.655660078019002e-82 1 0.9999999999408986 5.910131002042326e-11 0.9997937955612987 0.0002062044387013174 0.9999999995230501 4.769499719399953e-10 1.96368180863897e-05 0.9999803631819136 7.312920506591824e-07 0.9999992687079495 5.540686325475239e-11 0.999999999944593 0.0004058430222448289 0.9995941569777551 8.032405479639894e-14 0.9999999999999196 0.9999999999999999 0 0.3192448081439967 0.6807551918560034 0.9999999999999999 0 0.9999999999937963 6.203738922594886e-12 1 7.083842584467194e-17 0.9999708890455029 2.911095449715808e-05 0.9190978361021465 0.08090216389785357 1 7.403093100376345e-227 6.917597155836082e-22 1 0.9999969588298636 3.041170136332218e-06 3.00905694778412e-72 1 0.9999999999991157 8.842486056346304e-13 0.02609646702904959 0.9739035329709506 0.9999999961033116 3.896688293334848e-09 0.9999999999999997 4.357115507349616e-16 0.1711036996207231 0.828896300379277 1.565930144701539e-15 0.9999999999999984 0.0003288735626705105 0.9996711264373295 0.9999591164123203 4.088358767973399e-05 0.618110840110462 0.3818891598895379 1.451503817143658e-66 1 0.9999999938019547 6.1980453983585e-09 1 1.711757578575222e-24 0.0001046635415916115 0.9998953364584086 0.9506787292449046 0.04932127075509538 1.058174305031032e-07 0.9999998941825694 1 8.811944644114187e-20 6.278697963695386e-07 0.9999993721302037 0.999999999998527 1.473070991236631e-12 0.9999999996562631 3.437368096766586e-10 0.001099884412796947 0.9989001155872029 3.58563554221928e-05 0.9999641436445779 2.638000553821999e-84 0.9999999999999999 5.057056279204837e-07 0.9999994942943721 1 1.962174243598451e-64 0.2317645348748699 0.7682354651251302 0.00518805884308916 0.9948119411569109 0.08097709161414146 0.9190229083858585 1.136957756139334e-17 1 0.7066021095264233 0.2933978904735766 0.999999948848619 5.115138105039478e-08 0.00974064825479503 0.9902593517452049 0.2463522848902862 0.7536477151097137 1 1.508320014309029e-36 0.9999999999616294 3.83707463687589e-11 0.9999999999999936 6.416180427170272e-15 0.7750916449565477 0.2249083550434522 1.409743284833006e-65 1 1 7.607373378860111e-40 1.013595237328119e-24 1 0.0005835442372195731 0.9994164557627804 0.0002615201904285795 0.9997384798095714 0.9999978616426904 2.138357309523429e-06 0.9999999999999409 5.914783458911835e-14 0.0005315955542408546 0.9994684044457591 1 1.247097536800575e-145 1 3.286589013981058e-18 0.1749796640781934 0.8250203359218066</probabilities>
+		</cpt>
+		<cpt id="NODE052">
+			<state id="STATE00" />
+			<state id="STATE01" />
+			<parents>NODE003 NODE019 NODE040 NODE046 NODE049</parents>
+			<probabilities>0.30000001 0.69999999 0.44444445 0.55555558 0.55555558 0.44444445 0.55555558 0.44444445 0.44444445 0.55555558 0.5 0.5 0.625 0.375 0.41666666 0.58333331 0.72727275 0.27272728 0.5384615699999999 0.46153846 0.40000001 0.60000002 0.41666666 0.58333331 0.81818181 0.18181819 0.44444445 0.55555558 0.5714286 0.42857143 0.36363637 0.63636363 0.5 0.5 0.22222222 0.77777779 0.60000002 0.40000001 0.76923078 0.23076923 0.54545456 0.45454547 0.25 0.75 0.27272728 0.72727275 0.71428573 0.2857143 0.5625 0.4375 0.22222222 0.77777779 0.16666667 0.83333331 0.42857143 0.5714286 0.41666666 0.58333331 0.40000001 0.60000002 0.61538464 0.38461539 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="NODE053">
+			<state id="STATE00" />
+			<state id="STATE01" />
+			<parents>NODE026 NODE028 NODE034 NODE045 NODE048</parents>
+			<probabilities>0.83333331 0.16666667 0.16666667 0.83333331 0.58333331 0.41666666 0.625 0.375 0.42857143 0.5714286 0.47058824 0.52941179 0.33333334 0.66666669 0.33333334 0.66666669 0.5 0.5 0.5714286 0.42857143 0.18181819 0.81818181 0.38461539 0.61538464 0.63636363 0.36363637 0.53333336 0.46666667 0.23076923 0.76923078 0.63636363 0.36363637 0.36363637 0.63636363 0.53333336 0.46666667 0.66666669 0.33333334 0.60000002 0.40000001 0.66666669 0.33333334 0.75 0.25 0.72727275 0.27272728 0.38461539 0.61538464 0.33333334 0.66666669 0.72727275 0.27272728 0.45454547 0.54545456 0.75 0.25 0.18181819 0.81818181 0.69999999 0.30000001 0.40000001 0.60000002 0.5625 0.4375</probabilities>
+		</cpt>
+	</nodes>
+	<extensions>
+		<genie version="1.0" app="SMILE_ACADEMIC 2.2.0@40eb97e8a55a" name="A">
+			<comment>The A network is a randomly generated network contributed to the community by Alex Kozlov and used for several benchmarks in the UAI literature. Even though A contains only 54 nodes, it is rather densly connected and is known to be daunting to exact algorithms.\nReference:\nThe network has been first mentioned in: Kozlov, Alexander V. and Singh, Jaswinder Pal (1996). Parallel Implementations of Probabilistic Inference. IEEE Computer, pages 33-40.</comment>
+			<node id="NODE000">
+				<name>NODE000</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>22 22 98 58</position>
+			</node>
+			<node id="NODE001">
+				<name>NODE001</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>122 22 198 58</position>
+			</node>
+			<node id="NODE002">
+				<name>NODE002</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>222 22 298 58</position>
+			</node>
+			<node id="NODE003">
+				<name>NODE003</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>22 82 98 118</position>
+			</node>
+			<node id="NODE004">
+				<name>NODE004</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>322 22 398 58</position>
+			</node>
+			<node id="NODE005">
+				<name>NODE005</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>422 22 498 58</position>
+			</node>
+			<node id="NODE006">
+				<name>NODE006</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>122 82 198 118</position>
+			</node>
+			<node id="NODE007">
+				<name>NODE007</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>522 22 598 58</position>
+			</node>
+			<node id="NODE008">
+				<name>NODE008</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>622 22 698 58</position>
+			</node>
+			<node id="NODE009">
+				<name>NODE009</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>722 22 798 58</position>
+			</node>
+			<node id="NODE010">
+				<name>NODE010</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>222 82 298 118</position>
+			</node>
+			<node id="NODE011">
+				<name>NODE011</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>322 82 398 118</position>
+			</node>
+			<node id="NODE012">
+				<name>NODE012</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>22 162 98 198</position>
+			</node>
+			<node id="NODE013">
+				<name>NODE013</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>422 82 498 118</position>
+			</node>
+			<node id="NODE014">
+				<name>NODE014</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>522 82 598 118</position>
+			</node>
+			<node id="NODE015">
+				<name>NODE015</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>22 222 98 258</position>
+			</node>
+			<node id="NODE016">
+				<name>NODE016</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>122 222 198 258</position>
+			</node>
+			<node id="NODE017">
+				<name>NODE017</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>122 162 198 198</position>
+			</node>
+			<node id="NODE018">
+				<name>NODE018</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>822 22 898 58</position>
+			</node>
+			<node id="NODE019">
+				<name>NODE019</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>22 302 98 338</position>
+			</node>
+			<node id="NODE020">
+				<name>NODE020</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>222 222 298 258</position>
+			</node>
+			<node id="NODE021">
+				<name>NODE021</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>922 22 998 58</position>
+			</node>
+			<node id="NODE022">
+				<name>NODE022</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>322 222 398 258</position>
+			</node>
+			<node id="NODE023">
+				<name>NODE023</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>622 82 698 118</position>
+			</node>
+			<node id="NODE024">
+				<name>NODE024</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>422 222 498 258</position>
+			</node>
+			<node id="NODE025">
+				<name>NODE025</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>522 222 598 258</position>
+			</node>
+			<node id="NODE026">
+				<name>NODE026</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>222 162 298 198</position>
+			</node>
+			<node id="NODE027">
+				<name>NODE027</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>322 162 398 198</position>
+			</node>
+			<node id="NODE028">
+				<name>NODE028</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>122 302 198 338</position>
+			</node>
+			<node id="NODE029">
+				<name>NODE029</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>622 222 698 258</position>
+			</node>
+			<node id="NODE030">
+				<name>NODE030</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>222 302 298 338</position>
+			</node>
+			<node id="NODE031">
+				<name>NODE031</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>22 362 98 398</position>
+			</node>
+			<node id="NODE032">
+				<name>NODE032</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>322 302 398 338</position>
+			</node>
+			<node id="NODE033">
+				<name>NODE033</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>422 162 498 198</position>
+			</node>
+			<node id="NODE034">
+				<name>NODE034</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>422 302 498 338</position>
+			</node>
+			<node id="NODE035">
+				<name>NODE035</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>722 222 798 258</position>
+			</node>
+			<node id="NODE036">
+				<name>NODE036</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>522 302 598 338</position>
+			</node>
+			<node id="NODE037">
+				<name>NODE037</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>122 362 198 398</position>
+			</node>
+			<node id="NODE038">
+				<name>NODE038</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>522 162 598 198</position>
+			</node>
+			<node id="NODE039">
+				<name>NODE039</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>222 362 298 398</position>
+			</node>
+			<node id="NODE040">
+				<name>NODE040</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>323 362 399 398</position>
+			</node>
+			<node id="NODE041">
+				<name>NODE041</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>722 82 798 118</position>
+			</node>
+			<node id="NODE042">
+				<name>NODE042</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>622 302 698 338</position>
+			</node>
+			<node id="NODE043">
+				<name>NODE043</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>822 82 898 118</position>
+			</node>
+			<node id="NODE044">
+				<name>NODE044</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>622 162 698 198</position>
+			</node>
+			<node id="NODE045">
+				<name>NODE045</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>722 162 798 198</position>
+			</node>
+			<node id="NODE046">
+				<name>NODE046</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>1022 22 1098 58</position>
+			</node>
+			<node id="NODE047">
+				<name>NODE047</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>422 362 498 398</position>
+			</node>
+			<node id="NODE048">
+				<name>NODE048</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>522 362 598 398</position>
+			</node>
+			<node id="NODE049">
+				<name>NODE049</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>722 302 798 338</position>
+			</node>
+			<node id="NODE050">
+				<name>NODE050</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>22 442 98 478</position>
+			</node>
+			<node id="NODE051">
+				<name>NODE051</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>22 502 98 538</position>
+			</node>
+			<node id="NODE052">
+				<name>NODE052</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>122 442 198 478</position>
+			</node>
+			<node id="NODE053">
+				<name>NODE053</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>222 442 298 478</position>
+			</node>
+			<textbox>
+				<caption>The A network is a randomly generated network contributed to the community by Alex Kozlov and used for several benchmarks in the UAI literature. Even though A contains only 54 nodes, it is rather densly connected and is known to be daunting to exact algorithms.\nThe network has been first mentioned in:\nKozlov, Alexander V. and Singh, Jaswinder Pal (1996). Parallel Implementations of Probabilistic Inference. IEEE Computer, pages 33-40.</caption>
+				<font color="000000" name="MS Sans Serif" size="10" bold="true" />
+				<position>365 442 1071 556</position>
+			</textbox>
+		</genie>
+	</extensions>
+</smile>

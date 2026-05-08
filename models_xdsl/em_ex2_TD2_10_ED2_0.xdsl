@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This file was created by ACADEMIC version of SMILE -->
+<smile version="1.0" id="Unnamed" numsamples="10000" discsamples="10000">
+	<nodes>
+		<cpt id="U1">
+			<state id="a" />
+			<state id="b" />
+			<probabilities>1.951589182799465e-35 1</probabilities>
+		</cpt>
+		<cpt id="U2">
+			<state id="a" />
+			<state id="b" />
+			<probabilities>0.002482077323274158 0.9975179226767258</probabilities>
+		</cpt>
+		<cpt id="X1">
+			<state id="a" />
+			<state id="b" />
+			<parents>U1 U2</parents>
+			<probabilities>0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="R">
+			<state id="a" />
+			<state id="b" />
+			<parents>X1</parents>
+			<probabilities>0.9922917733406041 0.007708226659395839 0.007708226659395839 0.9922917733406041</probabilities>
+		</cpt>
+		<cpt id="U3">
+			<state id="a" />
+			<state id="b" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="Z">
+			<state id="a" />
+			<state id="b" />
+			<parents>X1 U2 U3</parents>
+			<probabilities>3.609837089890514e-08 0.999999963901629 0.05038704297917818 0.9496129570208218 0.00186427158233 0.99813572841767 1.80682890492027e-08 0.999999981931711 0.01574043865830845 0.9842595613416915 0.9991180217577398 0.0008819782422600515 8.583462299554359e-30 1 1 1.408937192619114e-57</probabilities>
+		</cpt>
+		<cpt id="X2">
+			<state id="a" />
+			<state id="b" />
+			<parents>X1 Z</parents>
+			<probabilities>0.992629201605113 0.007370798394886976 0.007370798394886976 0.992629201605113 0.992629201605113 0.007370798394886976 0.007370798394886976 0.992629201605113</probabilities>
+		</cpt>
+		<cpt id="Y">
+			<state id="a" />
+			<state id="b" />
+			<parents>X2 R U1 U3</parents>
+			<probabilities>0.9999343894959003 6.561050409959988e-05 0.9998382961772215 0.0001617038227784362 0.02229353665896919 0.9777064633410307 0.006799240087789525 0.9932007599122106 0.007194927092719124 0.9928050729072808 7.154787082430826e-13 0.9999999999992846 1.353375285984994e-09 0.9999999986466248 0.9948191073782943 0.005180892621705732 0.525263032868019 0.4747369671319811 0.9856142761958122 0.01438572380418769 0.9999999999999991 9.307418750063772e-16 4.553992140734543e-08 0.9999999544600786 0.9999999723960685 2.760393143722528e-08 4.309970303853306e-09 0.9999999956900296 7.173205046604014e-36 1 0.994962287280107 0.00503771271989282</probabilities>
+		</cpt>
+	</nodes>
+	<extensions>
+		<genie version="1.0" app="SMILE_ACADEMIC 2.2.0@40eb97e8a55a" name="Unnamed">
+			<node id="R">
+				<name>R</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>80 80 165 135</position>
+			</node>
+			<node id="Z">
+				<name>Z</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>100 100 185 155</position>
+			</node>
+			<node id="X1">
+				<name>X1</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>120 80 205 135</position>
+			</node>
+			<node id="X2">
+				<name>X2</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>120 80 205 135</position>
+			</node>
+			<node id="Y">
+				<name>Y</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>50 50 135 105</position>
+			</node>
+			<node id="U1">
+				<name>U1</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>85 50 170 105</position>
+			</node>
+			<node id="U2">
+				<name>U2</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>120 50 205 105</position>
+			</node>
+			<node id="U3">
+				<name>U3</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>120 50 205 105</position>
+			</node>
+		</genie>
+	</extensions>
+</smile>

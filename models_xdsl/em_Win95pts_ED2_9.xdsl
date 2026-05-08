@@ -1,0 +1,975 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This file was created by ACADEMIC version of SMILE -->
+<smile version="1.0" id="win95pts" numsamples="1000" discsamples="10000">
+	<nodes>
+		<cpt id="AppOK">
+			<state id="Correct" />
+			<state id="Incorrect_Corrupt" />
+			<probabilities>0.995 0.005000000000000001</probabilities>
+		</cpt>
+		<cpt id="DataFile">
+			<state id="Correct" />
+			<state id="Incorrect_Corrupt" />
+			<probabilities>0.995 0.005000000000000001</probabilities>
+		</cpt>
+		<cpt id="AppData">
+			<state id="Correct" />
+			<state id="Incorrect_or_corrupt" />
+			<parents>AppOK DataFile</parents>
+			<probabilities>0.9999 0.0001 0 1 0 1 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="DskLocal">
+			<state id="Greater_than_2_Mb" />
+			<state id="Less_than_2_Mb" />
+			<probabilities>0.97 0.03</probabilities>
+		</cpt>
+		<cpt id="PrtSpool">
+			<state id="Enabled" />
+			<state id="Disabled" />
+			<probabilities>0.03758500246842435 0.9624149975315758</probabilities>
+		</cpt>
+		<cpt id="PrtOn">
+			<state id="Yes" />
+			<state id="No" />
+			<probabilities>4.161111996988326e-07 0.9999995838888003</probabilities>
+		</cpt>
+		<cpt id="PrtPaper">
+			<state id="Has_Paper" />
+			<state id="No_Paper" />
+			<probabilities>4.493993657308583e-05 0.9999550600634268</probabilities>
+		</cpt>
+		<cpt id="NetPrint">
+			<state id="No__Local_printer_" />
+			<state id="Yes__Network_printer_" />
+			<probabilities>0.01674082419078031 0.9832591758092197</probabilities>
+		</cpt>
+		<cpt id="PrtDriver">
+			<state id="Yes" />
+			<state id="No" />
+			<probabilities>0.9999486103979728 5.138960202716355e-05</probabilities>
+		</cpt>
+		<cpt id="PrtThread">
+			<state id="OK" />
+			<state id="Corrupt_Buggy" />
+			<probabilities>0.9999 0.0001</probabilities>
+		</cpt>
+		<cpt id="EMFOK">
+			<state id="Yes" />
+			<state id="No" />
+			<parents>AppData DskLocal PrtThread</parents>
+			<probabilities>0.99 0.01 0.05 0.95 0 1 0.5 0.5 0.1 0.9 0.5 0.5 0.5 0.5 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="GDIIN">
+			<state id="Yes" />
+			<state id="No" />
+			<parents>AppData PrtSpool EMFOK</parents>
+			<probabilities>0.540888507232911 0.459111492767089 0.007227844460555042 0.9927721555394451 0.5037270550834697 0.4962729449165303 3.250402719477201e-12 0.9999999999967497 8.024694903119979e-57 1 0.998983948381415 0.001016051618584945 0.9999999999321816 6.781853437210129e-11 0.0002540677797071144 0.9997459322202928</probabilities>
+		</cpt>
+		<cpt id="DrvSet">
+			<state id="Correct" />
+			<state id="Incorrect" />
+			<probabilities>0.99 0.01</probabilities>
+		</cpt>
+		<cpt id="DrvOK">
+			<state id="Reinstalled" />
+			<state id="Corrupt" />
+			<probabilities>0.99 0.01</probabilities>
+		</cpt>
+		<cpt id="GDIOUT">
+			<state id="Yes" />
+			<state id="No" />
+			<parents>PrtDriver GDIIN DrvSet DrvOK</parents>
+			<probabilities>0.99 0.01 0.2 0.8 0.9 0.1 0.5 0.5 0.1 0.9 0.5 0.5 0.5 0.5 0.5 0.5 0.1 0.9 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="PrtSel">
+			<state id="Yes" />
+			<state id="No" />
+			<probabilities>0.99 0.01</probabilities>
+		</cpt>
+		<cpt id="PrtDataOut">
+			<state id="Yes" />
+			<state id="No" />
+			<parents>GDIOUT PrtSel</parents>
+			<probabilities>0.99 0.01 0 1 0 1 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="PrtPath">
+			<state id="Correct" />
+			<state id="Incorrect" />
+			<probabilities>0.3417392256698352 0.6582607743301648</probabilities>
+		</cpt>
+		<cpt id="NtwrkCnfg">
+			<state id="Correct" />
+			<state id="Incorrect" />
+			<probabilities>0.9882499131388195 0.01175008686118055</probabilities>
+		</cpt>
+		<cpt id="PTROFFLINE">
+			<state id="Online" />
+			<state id="Offline" />
+			<probabilities>0.9999999999982225 1.777431167281083e-12</probabilities>
+		</cpt>
+		<cpt id="NetOK">
+			<state id="Yes" />
+			<state id="No" />
+			<parents>PrtPath NtwrkCnfg PTROFFLINE</parents>
+			<probabilities>1 1.52886724353278e-64 0.01194271664318325 0.9880572833568169 0.9999999867457389 1.325426112377022e-08 0.9999963007695903 3.699230409538522e-06 0.9999999999999016 9.835289787862793e-14 0.9999999999439766 5.602336146487507e-11 0.0002659911745598779 0.9997340088254399 7.58888264074482e-59 0.9999999999999999</probabilities>
+		</cpt>
+		<cpt id="PrtCbl">
+			<state id="Connected" />
+			<state id="Loose" />
+			<probabilities>0.9999999999999966 3.5451585541236e-15</probabilities>
+		</cpt>
+		<cpt id="PrtPort">
+			<state id="Yes" />
+			<state id="No" />
+			<probabilities>0.09708970289130948 0.9029102971086904</probabilities>
+		</cpt>
+		<cpt id="CblPrtHrdwrOK">
+			<state id="Operational" />
+			<state id="Not_Operational" />
+			<probabilities>1.385060186913921e-05 0.9999861493981309</probabilities>
+		</cpt>
+		<cpt id="LclOK">
+			<state id="Yes" />
+			<state id="No" />
+			<parents>PrtCbl PrtPort CblPrtHrdwrOK</parents>
+			<probabilities>0.9810577445668657 0.01894225543313443 0 0.9999999999999999 0.0003035355077271152 0.9996964644922728 2.353033528724674e-29 1 0.0001288561631045415 0.9998711438368955 0.9999999999999998 1.009695283637084e-16 1.396237031616386e-41 0.9999999999999999 2.75540191579786e-09 0.999999997244598</probabilities>
+		</cpt>
+		<cpt id="DSApplctn">
+			<state id="DOS" />
+			<state id="Windows" />
+			<probabilities>0.15 0.85</probabilities>
+		</cpt>
+		<cpt id="PrtMpTPth">
+			<state id="Correct" />
+			<state id="Incorrect" />
+			<probabilities>0.8 0.2</probabilities>
+		</cpt>
+		<cpt id="DS_NTOK">
+			<state id="Yes" />
+			<state id="No" />
+			<parents>AppData PrtPath PrtMpTPth NtwrkCnfg PTROFFLINE</parents>
+			<probabilities>0.9999999845664409 1.543355916332633e-08 0.5652665586623061 0.4347334413376939 2.151091155765652e-51 1 7.433590203163203e-14 0.9999999999999256 0.9999997253952244 2.746047756597895e-07 0.7475936421111473 0.2524063578888526 0.4672326003385692 0.5327673996614308 2.094510647335679e-11 0.9999999999790548 0.01084821226337926 0.9891517877366207 0.0002216659434244789 0.9997783340565756 0.00317046252376038 0.9968295374762397 7.06999226519161e-06 0.9999929300077349 0.999988258438306 1.174156169397236e-05 4.139813523519496e-12 0.9999999999958601 0.9999998075711908 1.924288091568455e-07 0.03720553453734056 0.9627944654626595 0.803557364883019 0.1964426351169811 0.9999999999965089 3.490988343571211e-12 0.0003510002002992369 0.9996489997997007 0.7313443107739661 0.2686556892260339 0.9999999996824278 3.175722459264228e-10 0.2207392549108724 0.7792607450891275 0.9999999999995981 4.017308787059169e-13 1 3.16404493578482e-53 0 0.9999999999999999 0.1066553833528795 0.8933446166471205 0.004011239741662538 0.9959887602583374 0.9999383926551535 6.160734484648235e-05 0.865103386520907 0.1348966134790931 0.9969896715506146 0.003010328449385377 0.9992956674834697 0.0007043325165303955 0.5063942191274418 0.4936057808725582</probabilities>
+		</cpt>
+		<cpt id="DS_LCLOK">
+			<state id="Yes" />
+			<state id="No" />
+			<parents>AppData PrtCbl PrtPort CblPrtHrdwrOK</parents>
+			<probabilities>0.0207564015699839 0.9792435984300161 0.0003664124145174856 0.9996335875854825 0.9999970143390297 2.985660970290884e-06 0.9997341563423996 0.0002658436576002754 1.831889784238898e-14 0.9999999999999816 3.686135532664675e-15 0.9999999999999964 0.9999999999999998 2.50071606286359e-16 0.1163075446291508 0.8836924553708492 0.9065487754043112 0.09345122459568887 1 0 1 2.2422691489491e-55 0.9999999999998148 1.852425410158419e-13 0.007628838844570959 0.992371161155429 0.999988367696698 1.163230330210239e-05 1.320777272009725e-15 0.9999999999999987 3.404516009586637e-15 0.9999999999999967</probabilities>
+		</cpt>
+		<cpt id="PC2PRT">
+			<state id="Yes" />
+			<state id="No" />
+			<parents>NetPrint PrtDataOut NetOK LclOK DSApplctn DS_NTOK DS_LCLOK</parents>
+			<probabilities>9.845502240297809e-06 0.9999901544977596 0.999849417677804 0.0001505823221960084 0.9992676148581409 0.0007323851418591602 0.9999999900983451 9.901655007435916e-09 0.9884746364719608 0.01152536352803933 0.07442199388386174 0.9255780061161383 1 1.211493207713168e-23 0.2961229384009211 0.7038770615990789 0.004424935152494502 0.9955750648475055 0.004175049165692979 0.9958249508343071 0.002326031704480762 0.9976739682955192 0.9981925721014452 0.00180742789855477 0.996804161213684 0.003195838786315926 0.006039514319536847 0.9939604856804631 1.921534073679447e-21 1 0.9996449629073028 0.0003550370926972692 0.09004310095605988 0.9099568990439402 0.1838913146289188 0.8161086853710811 1 1.528408905788588e-27 1 3.248538912465786e-154 1 2.038398814408603e-51 0.1231341888301047 0.8768658111698951 2.203598050493921e-89 1 0.5868276827298464 0.4131723172701537 0.9998480805289344 0.0001519194710656404 0.3352207058580368 0.6647792941419631 1.152964381929519e-08 0.9999999884703561 3.618359409677173e-05 0.9999638164059031 0.9999999988976072 1.102393021659652e-09 2.493466059499054e-98 1 1 2.60093467550051e-71 0.9999999999999984 1.533766907527547e-15 0.9538061105366397 0.04619388946336036 1.199398249029786e-09 0.9999999988006016 0.999932679322982 6.732067701812244e-05 0.4457391626260692 0.5542608373739308 0.7039032972812987 0.2960967027187013 0.9999999999999999 5.004782643712743e-30 2.016212348373821e-27 0.9999999999999999 7.636091871185496e-07 0.9999992363908128 0.9999999999999999 1.310414676972081e-16 0.2731713094791038 0.7268286905208963 0.9783241848970073 0.0216758151029928 0.0002360117959634797 0.9997639882040364 1 9.735088562965628e-24 7.943786219346695e-10 0.9999999992056214 1 7.392872825205847e-47 0.2733863580363186 0.7266136419636815 0.7508357307068122 0.2491642692931877 0.9993348045938167 0.0006651954061832867 0.3160925411661889 0.6839074588338112 0.003453250961612357 0.9965467490383878 0.6678189360168478 0.3321810639831523 8.694794591771599e-182 1 0.0001956292042231496 0.9998043707957769 0.9999989824323998 1.017567600135213e-06 0.8007613528774569 0.1992386471225431 5.069372646911298e-49 1 3.195325681979937e-17 1 0.9999995704055564 4.295944434610966e-07 0.9999999995253206 4.746794408691048e-10 5.428258028897526e-06 0.9999945717419711 0.8881236631010458 0.1118763368989541 0.04797662508432354 0.9520233749156765 4.700195630548477e-07 0.9999995299804368 0.9988784348514546 0.001121565148545526 1 0 0.9999999999949711 5.028857953559993e-12 1.013706761260729e-19 1 0.9822216406927474 0.01777835930725256 0.4750616573983466 0.5249383426016534 1 3.185018006040676e-21 3.779055771439738e-36 1 0.7155512079441242 0.2844487920558758 1.803581337006065e-15 0.9999999999999982 0.6688736313861056 0.3311263686138945 0.9999999999870346 1.296551652276052e-11 1 0 0.9918078420663458 0.008192157933654239 0.3279093312594493 0.6720906687405507 0.0001349784989661946 0.9998650215010338 1.850721177167905e-06 0.9999981492788228 0.9999999981500932 1.849906923898693e-09 0.4843840965624399 0.5156159034375601 0.9999651186828398 3.48813171602822e-05 0.02390475439702917 0.9760952456029709 4.984162428704784e-13 0.9999999999995016 2.313449140800758e-07 0.999999768655086 0.9999999999999992 8.269490278666378e-16 1 4.38928568128147e-59 0.0005380054354343023 0.9994619945645656 0.7776258000234657 0.2223741999765344 2.409929871383629e-12 0.99999999999759 0.1165784594402865 0.8834215405597136 0.1883770222542558 0.8116229777457442 3.119783581271875e-30 1 6.141297979562447e-55 1 0.0001126399515305894 0.9998873600484693 0.6518313661718547 0.3481686338281453 0.9982054991067072 0.001794500893292886 2.015066658816623e-14 0.9999999999999798 0.9999999948010401 5.198959868669351e-09 1.217336321864303e-08 0.9999999878266368 0.999999998186049 1.813950949883614e-09 1 1.362821832442455e-31 1.049404999834107e-182 1 1.585391025074791e-06 0.9999984146089749 0.0004121243171274309 0.9995878756828727 1 1.323986172944035e-72 1 1.267368631357146e-18 0.3987910035658189 0.6012089964341812 0.8048282681938992 0.1951717318061007 0.9998704078673245 0.000129592132675604 0.9910547856745231 0.008945214325476802 1 5.032729728895592e-176 0.9997340055397339 0.0002659944602660061 0.9886159361328234 0.01138406386717656 0.9999996265691271 3.734308727787761e-07 0.006408547643325247 0.9935914523566748 0.9999999999999999 6.0389344669954e-25 0.7508405301384289 0.2491594698615712 0.07398874558695173 0.9260112544130483 0.4148804058778635 0.5851195941221363 0.9999912810594739 8.718940526033471e-06 1.067009531249686e-26 1 1 2.041879056418488e-27 2.517521270115662e-05 0.9999748247872989 0.9999818743678801 1.812563211999623e-05</probabilities>
+		</cpt>
+		<cpt id="PrtMem">
+			<state id="Greater_than_2_Mb" />
+			<state id="Less_than_2Mb" />
+			<probabilities>0.04012874220277911 0.9598712577972209</probabilities>
+		</cpt>
+		<cpt id="PrtTimeOut">
+			<state id="Long_Enough" />
+			<state id="Too_Short" />
+			<probabilities>0.9399999999999999 0.06</probabilities>
+		</cpt>
+		<cpt id="FllCrrptdBffr">
+			<state id="Intact__not_Corrupt_" />
+			<state id="Full_or_Corrupt" />
+			<probabilities>0.85 0.15</probabilities>
+		</cpt>
+		<cpt id="TnrSpply">
+			<state id="Adequate" />
+			<state id="Low" />
+			<probabilities>0.02257112048898623 0.9774288795110138</probabilities>
+		</cpt>
+		<cpt id="PrtData">
+			<state id="Yes" />
+			<state id="No" />
+			<parents>PrtOn PrtPaper PC2PRT PrtMem PrtTimeOut FllCrrptdBffr TnrSpply</parents>
+			<probabilities>0.999999666482226 3.335177740336804e-07 4.316164890106358e-08 0.9999999568383511 0.9999999999999999 2.058827073691301e-35 0.5925945499856523 0.4074054500143475 1.764679613926635e-06 0.999998235320386 0.5386236164198532 0.4613763835801468 0 1 0.9963117467614876 0.003688253238512368 0.9999998519720278 1.480279722094225e-07 8.5484262085537e-36 1 0.3103914237999052 0.6896085762000947 0.3900765058312862 0.6099234941687139 0.9999955201097805 4.4798902195467e-06 0.7529398568556953 0.2470601431443047 0.9999980358042874 1.964195712598658e-06 0.290977265543805 0.7090227344561949 1.019138793244526e-82 1 0.9999986171219372 1.38287806279292e-06 0.0005345727787777155 0.9994654272212222 0.9325931849476294 0.0674068150523706 1.706954757446987e-05 0.9999829304524256 1.317039870789412e-05 0.999986829601292 1.350485615468981e-09 0.9999999986495143 0.644712014063596 0.355287985936404 2.364180489191227e-06 0.9999976358195108 1 7.976481244611834e-20 0.0009225609350894319 0.9990774390649106 0.9999999999999989 1.033761796445874e-15 8.421368838125099e-46 1 0.01180151138072636 0.9881984886192735 0.9999999999999957 4.360396241383438e-15 0.07858889650238288 0.9214111034976171 0.9999902917533464 9.708246653468858e-06 0.9766500744102332 0.02334992558976678 0.9951924195910777 0.004807580408922154 4.897546972999047e-09 0.999999995102453 0.3306577834044783 0.6693422165955216 0.9997366161619964 0.0002633838380035493 5.850622662265652e-06 0.9999941493773377 0.9999790942502718 2.090574972825852e-05 0.9996365497684586 0.0003634502315414404 8.756132747784467e-06 0.9999912438672521 0.9920188593987458 0.007981140601254147 0.5181891714635296 0.4818108285364703 0.4830828338819652 0.5169171661180347 0.9999999603350211 3.966497882233992e-08 0.2904493916658469 0.7095506083341531 0.9992972812869019 0.0007027187130981963 7.277412266972852e-05 0.9999272258773304 0.8116690090827345 0.1883309909172655 2.012538923729055e-07 0.9999997987461077 0.307496135630477 0.692503864369523 0.01490340004945004 0.9850965999505501 0.9978248729315943 0.002175127068405654 0.9909015326168819 0.00909846738311821 1 5.777957345088538e-27 0.9750339224045631 0.02496607759543708 0.9999999876139507 1.23860493011813e-08 0.9985664228904626 0.001433577109537483 1 2.791547834316364e-169 0.999583388039778 0.0004166119602218939 0.9960870551058882 0.003912944894111785 0.7399737274401974 0.2600262725598027 0.9498917683970118 0.0501082316029882 6.467587063711495e-188 1 0.9999999745739246 2.542607550644696e-08 6.699443537241745e-06 0.9999933005564627 0.9999999999999999 9.00374381124563e-19 1.810419856188101e-14 0.9999999999999818 0.9961872835248299 0.003812716475170166 0.0001033244298220587 0.999896675570178 0.07021799026162776 0.9297820097383722 0.01049505171828464 0.9895049482817154 1 1.201280689482879e-115 1 1.158381358552205e-25 0.9999999998063219 1.936779880837497e-10 0.999999980789989 1.921001096556189e-08 0.6665139277510389 0.3334860722489612 6.367847323842844e-09 0.9999999936321526 0.9999455052460863 5.44947539135783e-05 0.9690904919824725 0.03090950801752746 0.9984023139617597 0.00159768603824036 0.9999999999983725 1.627500433680583e-12 0.09026429537503375 0.9097357046249662 0.9999909671885153 9.032811484683107e-06 0.4361884054552162 0.5638115945447838 0.04189271692998409 0.9581072830700159 0.02369902519363758 0.9763009748063625 0.9999999999977272 2.272887174874371e-12 0.9908733093805242 0.009126690619475703 0.9990811594117246 0.0009188405882753142 1.863637062093568e-05 0.9999813636293791 1.753339810924447e-30 1 1.287186030561613e-06 0.9999987128139695 0.0006836617519587894 0.9993163382480412 0.2391422718308341 0.760857728169166 2.287030982362831e-19 1 1.671715406485228e-110 1 3.514998384761943e-11 0.9999999999648499 0.9905110343210198 0.009488965678980166 1 1.371415665169308e-18 0.1409422159348226 0.8590577840651773 0.9999999928125135 7.187486619634454e-09 0.9781292337808728 0.02187076621912724 0.9781314496875688 0.02186855031243124 1 8.643481561564027e-25 0.2767595433344234 0.7232404566655766 0.9989582516509168 0.001041748349083128 4.07203510163728e-09 0.9999999959279648 0.2157941059184346 0.7842058940815654 0.001459807595134568 0.9985401924048654 2.37728652959408e-07 0.9999997622713471 8.913444151289247e-07 0.9999991086555849 0.8529322283500558 0.1470677716499443 0.995442341256443 0.00455765874355696 8.679345300542885e-19 1 0.9999999999877354 1.226465818605334e-11 1.522828250896379e-29 1 0.03144360246106574 0.9685563975389343 0.4623043346323983 0.5376956653676017 5.8758447413822e-58 1 1 5.564447624725585e-106 0.9828386901746283 0.01716130982537179 0.999998268205338 1.731794662032501e-06 9.128185719363143e-06 0.9999908718142806 0.04231039866427302 0.9576896013357269 6.158633836170066e-07 0.9999993841366165 4.240572079920768e-32 1</probabilities>
+		</cpt>
+		<cpt id="Problem1">
+			<state id="Normal_Output" />
+			<state id="No_Output" />
+			<parents>PrtData</parents>
+			<probabilities>1 0 0 1</probabilities>
+		</cpt>
+		<cpt id="AppDtGnTm">
+			<state id="Fast_Enough" />
+			<state id="Too_Long" />
+			<parents>PrtSpool</parents>
+			<probabilities>0.001509317479741871 0.998490682520258 0.9962298100597056 0.003770189940294387</probabilities>
+		</cpt>
+		<cpt id="PrntPrcssTm">
+			<state id="Fast_Enough" />
+			<state id="Too_Long" />
+			<parents>PrtSpool</parents>
+			<probabilities>0.9999999998545872 1.454129121492819e-10 0.9737328851013347 0.02626711489866522</probabilities>
+		</cpt>
+		<cpt id="DeskPrntSpd">
+			<state id="OK" />
+			<state id="Too_Slow" />
+			<parents>PrtMem AppDtGnTm PrntPrcssTm</parents>
+			<probabilities>3.658021297641783e-13 0.9999999999996343 0.9999985803179033 1.419682096603034e-06 0.01385437915308335 0.9861456208469166 0.9068519604295394 0.09314803957046068 0.04836779541951226 0.9516322045804877 0.2101147209971208 0.7898852790028793 1.749252178752903e-05 0.9999825074782124 0.0003470205259037902 0.9996529794740961</probabilities>
+		</cpt>
+		<cpt id="PgOrnttnOK">
+			<state id="Correct" />
+			<state id="Incorrect" />
+			<probabilities>0.95 0.05</probabilities>
+		</cpt>
+		<cpt id="PrntngArOK">
+			<state id="Correct" />
+			<state id="Incorrect" />
+			<probabilities>0.98 0.02</probabilities>
+		</cpt>
+		<cpt id="ScrnFntNtPrntrFnt">
+			<state id="Yes" />
+			<state id="No" />
+			<probabilities>0.95 0.05</probabilities>
+		</cpt>
+		<cpt id="CmpltPgPrntd">
+			<state id="Yes" />
+			<state id="No" />
+			<parents>PrtMem PgOrnttnOK PrntngArOK</parents>
+			<probabilities>2.070831866692604e-11 0.9999999999792917 0.9357820688563654 0.0642179311436345 0.8837900976978271 0.116209902302173 0.07247185493359659 0.9275281450664035 0.977704542665533 0.02229545733446701 0.9548226920283686 0.04517730797163137 7.774710173442188e-116 1 0.8254923110173673 0.1745076889826327</probabilities>
+		</cpt>
+		<cpt id="GrphcsRltdDrvrSttngs">
+			<state id="Correct" />
+			<state id="Incorrect" />
+			<probabilities>0.0552420962237188 0.9447579037762811</probabilities>
+		</cpt>
+		<cpt id="EPSGrphc">
+			<state id="No____TIF___WMF___BMP_" />
+			<state id="Yes____EPS_" />
+			<probabilities>0.1311879665917313 0.8688120334082687</probabilities>
+		</cpt>
+		<cpt id="NnPSGrphc">
+			<state id="Yes" />
+			<state id="No" />
+			<parents>PrtMem GrphcsRltdDrvrSttngs EPSGrphc</parents>
+			<probabilities>0.008830478289280904 0.991169521710719 5.293312439852283e-10 0.9999999994706688 0.9999961561896444 3.843810355561439e-06 1 2.165160146461733e-36 0.01322563710834206 0.986774362891658 0.9999999648749729 3.512502713443094e-08 1 1.645530743574481e-109 6.183766940788071e-22 1</probabilities>
+		</cpt>
+		<cpt id="PrtPScript">
+			<state id="Yes" />
+			<state id="No" />
+			<probabilities>1 1.417999195808673e-33</probabilities>
+		</cpt>
+		<cpt id="PSGRAPHIC">
+			<state id="Yes" />
+			<state id="No" />
+			<parents>PrtMem GrphcsRltdDrvrSttngs EPSGrphc</parents>
+			<probabilities>0.999 0.001 1 0 0.1 0.9 0.5 0.5 0.25 0.75 0.5 0.5 0.5 0.5 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="Problem4">
+			<state id="No" />
+			<state id="Yes" />
+			<parents>NnPSGrphc PrtPScript PSGRAPHIC</parents>
+			<probabilities>1.14167346264419e-290 0.9999999999999999 0.9999999985268503 1.473149537911155e-09 1 1.281085786975124e-128 0.9999993146715974 6.85328402592809e-07 0.9999924573803474 7.542619652700803e-06 1 2.182463005957061e-27 0.9999994211919465 5.788080535348126e-07 0.1195474891494646 0.8804525108505353</probabilities>
+		</cpt>
+		<cpt id="TrTypFnts">
+			<state id="Yes" />
+			<state id="No" />
+			<probabilities>0.9 0.1</probabilities>
+		</cpt>
+		<cpt id="FntInstlltn">
+			<state id="Verified" />
+			<state id="Faulty" />
+			<probabilities>0.6992624859112094 0.3007375140887906</probabilities>
+		</cpt>
+		<cpt id="PrntrAccptsTrtyp">
+			<state id="Yes" />
+			<state id="No" />
+			<probabilities>0.9 0.1</probabilities>
+		</cpt>
+		<cpt id="TTOK">
+			<state id="Yes" />
+			<state id="No" />
+			<parents>PrtMem FntInstlltn PrntrAccptsTrtyp</parents>
+			<probabilities>0.9967365418461697 0.003263458153830324 8.10893384222837e-06 0.9999918910661578 1 3.830625887878074e-44 0.01521734928888733 0.9847826507111127 0.9997702698795606 0.0002297301204394247 0.9999989432444493 1.056755550653954e-06 8.0743780708031e-21 1 0.9987545547292965 0.001245445270703479</probabilities>
+		</cpt>
+		<cpt id="NnTTOK">
+			<state id="Yes" />
+			<state id="No" />
+			<parents>PrtMem ScrnFntNtPrntrFnt FntInstlltn</parents>
+			<probabilities>2.428605656994701e-42 1 0.7501252598008756 0.2498747401991242 0.03228962412421785 0.967710375875782 0.9517463739629904 0.0482536260370097 0.9999968753701978 3.124629802297454e-06 0.7044167422182794 0.2955832577817206 0.1523916203767524 0.8476083796232478 0.8874853122745582 0.1125146877254418</probabilities>
+		</cpt>
+		<cpt id="Problem5">
+			<state id="No" />
+			<state id="Yes" />
+			<parents>TrTypFnts TTOK NnTTOK</parents>
+			<probabilities>0 1 0 1 1 0 1 0 0 1 1 0 0 1 1 0</probabilities>
+		</cpt>
+		<cpt id="LclGrbld">
+			<state id="Yes" />
+			<state id="No" />
+			<parents>AppData PrtDriver PrtMem CblPrtHrdwrOK</parents>
+			<probabilities>0.01426139368927118 0.9857386063107288 0.8470041759373838 0.1529958240626163 0.9999999999913252 8.674931947986455e-12 0.9977074598535817 0.002292540146418389 0.977324070882429 0.02267592911757108 0.995406198639197 0.004593801360802981 0.9999999999998819 1.18221346260022e-13 1 2.971120697707378e-23 0.9999981909529779 1.809047022053234e-06 0.6665478600895585 0.3334521399104415 0.003468998417685678 0.9965310015823142 1 9.386586278244725e-76 0.999356797706842 0.0006432022931578532 5.802456560873467e-05 0.9999419754343912 1 1.361172487038308e-32 0.0004524221000937276 0.9995475778999062</probabilities>
+		</cpt>
+		<cpt id="NtGrbld">
+			<state id="Yes" />
+			<state id="No" />
+			<parents>AppData PrtDriver PrtMem NtwrkCnfg</parents>
+			<probabilities>2.532968230874702e-05 0.9999746703176912 1.11240528023228e-07 0.999999888759472 0.9943752762505426 0.005624723749457413 0.9999999999999999 7.320271907527778e-35 0.9999999999174909 8.250918261547122e-11 0.9570483883721361 0.04295161162786376 0.9987741579241441 0.001225842075855947 0.9898081670514356 0.0101918329485643 0.9181681445829273 0.08183185541707265 0.1547034185656911 0.845296581434309 0.9999984157468075 1.584253192590688e-06 6.277610269469185e-07 0.9999993722389731 6.037576461593257e-07 0.9999993962423539 0.01196678635172838 0.9880332136482717 0.9327675375145972 0.06723246248540268 9.677506537130005e-11 0.999999999903225</probabilities>
+		</cpt>
+		<cpt id="GrbldOtpt">
+			<state id="No" />
+			<state id="Yes" />
+			<parents>NetPrint LclGrbld NtGrbld</parents>
+			<probabilities>0.9999991973950419 8.026049580093535e-07 0.7649286116229781 0.2350713883770219 1 2.511169842681922e-29 0.2386087737164351 0.7613912262835649 0.9955495515698923 0.004450448430107611 7.606273690161295e-21 1 0.9358021645743625 0.06419783542563745 4.653427911547006e-11 0.9999999999534657</probabilities>
+		</cpt>
+		<cpt id="HrglssDrtnAftrPrnt">
+			<state id="Fast_Enough" />
+			<state id="Too_Long" />
+			<parents>AppDtGnTm</parents>
+			<probabilities>0.99 0.01 0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="REPEAT">
+			<state id="Yes__Always_the_Same_" />
+			<state id="No__Different_Each_Time_" />
+			<parents>CblPrtHrdwrOK NtwrkCnfg</parents>
+			<probabilities>0.9534918572536536 0.04650814274634641 1.715772502154446e-159 1 0.9675119608768785 0.03248803912312145 0.9998175990709803 0.0001824009290196627</probabilities>
+		</cpt>
+		<cpt id="AvlblVrtlMmry">
+			<state id="Adequate____1Mb_" />
+			<state id="Inadequate____1_Mb_" />
+			<parents>PrtPScript</parents>
+			<probabilities>0.001385031064035118 0.9986149689359648 1 6.714458368017426e-25</probabilities>
+		</cpt>
+		<cpt id="PSERRMEM">
+			<state id="No_Error" />
+			<state id="Low_Memory" />
+			<parents>PrtPScript AvlblVrtlMmry</parents>
+			<probabilities>2.290664171028808e-07 0.9999997709335829 0.05416330605776127 0.9458366939422387 0.003973446961134042 0.9960265530388659 1 1.100052693889441e-315</probabilities>
+		</cpt>
+		<cpt id="TstpsTxt">
+			<state id="x_1_Mb_Available_VM" />
+			<state id="x_1_Mb_Available_VM2" />
+			<parents>PrtPScript AvlblVrtlMmry</parents>
+			<probabilities>0.9998859952672774 0.0001140047327226039 0.9826674044887846 0.01733259551121543 0.5246548941855689 0.4753451058144312 0.9999999999999999 4.763547516334381e-18</probabilities>
+		</cpt>
+		<cpt id="GrbldPS">
+			<state id="No" />
+			<state id="Yes" />
+			<parents>GrbldOtpt AvlblVrtlMmry</parents>
+			<probabilities>1 0 0.1 0.9 0 1 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="IncmpltPS">
+			<state id="Yes" />
+			<state id="No" />
+			<parents>CmpltPgPrntd AvlblVrtlMmry</parents>
+			<probabilities>1 0 0.3 0.7 0 1 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="PrtFile">
+			<state id="Yes" />
+			<state id="No" />
+			<parents>PrtDataOut</parents>
+			<probabilities>0.8 0.2 0.2 0.8</probabilities>
+		</cpt>
+		<cpt id="PrtIcon">
+			<state id="Normal" />
+			<state id="Grayed_Out" />
+			<parents>NtwrkCnfg PTROFFLINE</parents>
+			<probabilities>4.390391031200641e-21 1 0.0001566135250014314 0.9998433864749986 0.0001000210733896881 0.9998999789266103 8.171365926645204e-16 0.9999999999999991</probabilities>
+		</cpt>
+		<cpt id="Problem6">
+			<state id="No" />
+			<state id="Yes" />
+			<parents>GrbldOtpt PrtPScript GrbldPS</parents>
+			<probabilities>0.9942203723696258 0.005779627630374183 0.8814385720114764 0.1185614279885237 0.9999993311610228 6.688389772855341e-07 1 6.991865123269454e-51 1 3.020202684084695e-31 0.9999999590540872 4.094591275392702e-08 1.533442136619705e-19 1 0.9990108122249853 0.000989187775014666</probabilities>
+		</cpt>
+		<cpt id="Problem3">
+			<state id="No" />
+			<state id="Yes" />
+			<parents>CmpltPgPrntd PrtPScript IncmpltPS</parents>
+			<probabilities>6.647300397003692e-09 0.9999999933526996 0.9999996993404284 3.006595716161305e-07 0.002406199108211746 0.9975938008917882 0.06838942620924902 0.9316105737907511 0.7435059898533124 0.2564940101466876 0.9999999963421321 3.657867858488659e-09 0.9253223895170729 0.07467761048292711 0.9913871986147784 0.008612801385221597</probabilities>
+		</cpt>
+		<cpt id="PrtQueue">
+			<state id="Short" />
+			<state id="Long" />
+			<probabilities>0.99 0.01</probabilities>
+		</cpt>
+		<cpt id="NtSpd">
+			<state id="OK" />
+			<state id="Slow" />
+			<parents>DeskPrntSpd NtwrkCnfg PrtQueue</parents>
+			<probabilities>0.0008565166657536653 0.9991434833342464 0.8665052040138655 0.1334947959861343 0.997388187397738 0.002611812602262008 0.8292661371464474 0.1707338628535525 0.1758931151685903 0.8241068848314098 0.5125013340987139 0.4874986659012861 0.9987935160853993 0.001206483914600648 0.2375519800074992 0.7624480199925007</probabilities>
+		</cpt>
+		<cpt id="Problem2">
+			<state id="OK" />
+			<state id="Too_Long" />
+			<parents>NetPrint DeskPrntSpd NtSpd</parents>
+			<probabilities>0.94749739280881 0.05250260719118994 0.9999999999784287 2.157138896747847e-11 0.9994067334355656 0.0005932665644343755 0.9959234679747027 0.004076532025297209 0.01180422454520925 0.9881957754547909 0.1056637886073585 0.8943362113926415 0.9951825462182244 0.004817453781775513 0.9847404660070432 0.01525953399295681</probabilities>
+		</cpt>
+		<cpt id="PrtStatPaper">
+			<state id="No_Error" />
+			<state id="Jam__Out__Bin_Full" />
+			<parents>PrtPaper</parents>
+			<probabilities>0.99900001 0.0009999900000000001 0.0009999900000000001 0.99900001</probabilities>
+		</cpt>
+		<cpt id="PrtStatToner">
+			<state id="No_Error" />
+			<state id="Low__None" />
+			<parents>TnrSpply</parents>
+			<probabilities>0.99900001 0.0009999900000000001 0.0009999900000000001 0.99900001</probabilities>
+		</cpt>
+		<cpt id="PrtStatMem">
+			<state id="No_Error" />
+			<state id="Out_of_Memory" />
+			<parents>PrtMem</parents>
+			<probabilities>0.5530074274707564 0.4469925725292436 0.314037702418801 0.685962297581199</probabilities>
+		</cpt>
+		<cpt id="PrtStatOff">
+			<state id="No_Error" />
+			<state id="OFFLINE__OFF" />
+			<parents>PrtOn</parents>
+			<probabilities>0.99000001 0.00999999 0.00999999 0.99000001</probabilities>
+		</cpt>
+	</nodes>
+	<extensions>
+		<genie version="1.0" app="SMILE_ACADEMIC 2.2.0@40eb97e8a55a" name="Windows 95 Print Troubleshooter">
+			<comment>An expert system for printer troubleshooting in Windows 95.\nReference:\nMicrosoft, Inc.</comment>
+			<node id="AppOK">
+				<name>Application</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>2914 100 2980 141</position>
+			</node>
+			<node id="DataFile">
+				<name>Document</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>3014 100 3076 138</position>
+			</node>
+			<node id="AppData">
+				<name>Application Data</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>2 162 82 210</position>
+			</node>
+			<node id="DskLocal">
+				<name>Local Disk Space </name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>15 96 94 150</position>
+			</node>
+			<node id="PrtSpool">
+				<name>Print Spooling</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>102 92 178 139</position>
+			</node>
+			<node id="PrtOn">
+				<name>Printer On and Online</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>302 92 380 140</position>
+			</node>
+			<node id="PrtPaper">
+				<name>Printer Paper Supply</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>616 99 688 160</position>
+			</node>
+			<node id="NetPrint">
+				<name>Printing over Network</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>802 92 887 145</position>
+			</node>
+			<node id="PrtDriver">
+				<name>Correct Driver</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>502 92 582 142</position>
+			</node>
+			<node id="PrtThread">
+				<name>Port thread/Prt Proc OK</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>402 92 494 149</position>
+			</node>
+			<node id="EMFOK">
+				<name>EMF OK</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>2 232 56 265</position>
+			</node>
+			<node id="GDIIN">
+				<name>GDI Input OK</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>2 302 75 347</position>
+			</node>
+			<node id="DrvSet">
+				<name>Driver Configuration</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>712 96 794 157</position>
+			</node>
+			<node id="DrvOK">
+				<name>Driver File Status</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>1021 96 1095 150</position>
+			</node>
+			<node id="GDIOUT">
+				<name>GDI Output OK</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>460 403 542 454</position>
+			</node>
+			<node id="PrtSel">
+				<name>Correct Printer Selected</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>1104 94 1194 150</position>
+			</node>
+			<node id="PrtDataOut">
+				<name>PrintDataOut</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>460 473 533 518</position>
+			</node>
+			<node id="PrtPath">
+				<name>Net Printer Pathname</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>902 92 980 140</position>
+			</node>
+			<node id="NtwrkCnfg">
+				<name>Network Configuration</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>2409 91 2497 146</position>
+			</node>
+			<node id="PTROFFLINE">
+				<name>Printer Driver Set Offline</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>3319 101 3412 159</position>
+			</node>
+			<node id="NetOK">
+				<name>NET OK</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>102 162 154 194</position>
+			</node>
+			<node id="PrtCbl">
+				<name>Local Printer Cable</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>209 94 288 153</position>
+			</node>
+			<node id="PrtPort">
+				<name>Correct Local Port</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>1304 94 1401 154</position>
+			</node>
+			<node id="CblPrtHrdwrOK">
+				<name>Cable/Port Hardware</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>1404 94 1480 141</position>
+			</node>
+			<node id="LclOK">
+				<name>LOCAL OK</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>202 162 268 203</position>
+			</node>
+			<node id="DSApplctn">
+				<name>Print Environment</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>1504 94 1597 152</position>
+			</node>
+			<node id="PrtMpTPth">
+				<name>Port Mapping to Path</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>1604 94 1712 161</position>
+			</node>
+			<node id="DS_NTOK">
+				<name>DOS-NET OK</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>202 232 277 278</position>
+			</node>
+			<node id="DS_LCLOK">
+				<name>DOS-LOCAL OK</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>302 232 391 287</position>
+			</node>
+			<node id="PC2PRT">
+				<name>PC to PRT Transport</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>460 543 566 609</position>
+			</node>
+			<node id="PrtMem">
+				<name>Printer Memory</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>1204 94 1288 146</position>
+			</node>
+			<node id="PrtTimeOut">
+				<name>Printer Timeouts</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>2509 91 2597 146</position>
+			</node>
+			<node id="FllCrrptdBffr">
+				<name>Print Buffer</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>2814 100 2882 142</position>
+			</node>
+			<node id="TnrSpply">
+				<name>Toner Supply</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>3214 100 3290 147</position>
+			</node>
+			<node id="PrtData">
+				<name>Print Data</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>460 613 521 651</position>
+			</node>
+			<node id="Problem1">
+				<name>No Output</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>460 683 522 721</position>
+			</node>
+			<node id="AppDtGnTm">
+				<name>App Data Generation</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>602 162 681 211</position>
+			</node>
+			<node id="PrntPrcssTm">
+				<name>Print Processing</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>702 162 791 217</position>
+			</node>
+			<node id="DeskPrntSpd">
+				<name>Desk Speed</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>102 232 173 276</position>
+			</node>
+			<node id="PgOrnttnOK">
+				<name>Page Orientation</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>1704 94 1793 149</position>
+			</node>
+			<node id="PrntngArOK">
+				<name>Printer Printing Area</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>1809 91 1915 157</position>
+			</node>
+			<node id="ScrnFntNtPrntrFnt">
+				<name>Screen Matches Printer</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>1909 91 1998 146</position>
+			</node>
+			<node id="CmpltPgPrntd">
+				<name>Non PS Complete</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>302 162 380 215</position>
+			</node>
+			<node id="GrphcsRltdDrvrSttngs">
+				<name>Driver Config- Graphics</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>2009 91 2100 147</position>
+			</node>
+			<node id="EPSGrphc">
+				<name>EPS Graphic</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>2714 100 2787 145</position>
+			</node>
+			<node id="NnPSGrphc">
+				<name>Non PS Graphic</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>813 166 882 218</position>
+			</node>
+			<node id="PrtPScript">
+				<name>Postscript Printer</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>2609 91 2702 149</position>
+			</node>
+			<node id="PSGRAPHIC">
+				<name>PS Graphic</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>1104 164 1172 206</position>
+			</node>
+			<node id="Problem4">
+				<name>Graphics Distorted or Incomplete</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>402 232 500 293</position>
+			</node>
+			<node id="TrTypFnts">
+				<name>True Type Fonts</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>2109 91 2198 146</position>
+			</node>
+			<node id="FntInstlltn">
+				<name>Font Installation</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>2209 91 2295 144</position>
+			</node>
+			<node id="PrntrAccptsTrtyp">
+				<name>Printer Accepts Truetype</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>2309 91 2399 147</position>
+			</node>
+			<node id="TTOK">
+				<name>TT OK</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>402 162 450 192</position>
+			</node>
+			<node id="NnTTOK">
+				<name>Non TT OK</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>502 162 568 203</position>
+			</node>
+			<node id="Problem5">
+				<name>Fonts Missing or Distorted</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>502 232 595 290</position>
+			</node>
+			<node id="LclGrbld">
+				<name>Local Garbled OK</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>715 238 793 291</position>
+			</node>
+			<node id="NtGrbld">
+				<name>Net Garbled OK</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>802 232 888 285</position>
+			</node>
+			<node id="GrbldOtpt">
+				<name>Non PS Garbled</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>102 302 190 357</position>
+			</node>
+			<node id="HrglssDrtnAftrPrnt">
+				<name>Hourglass Duration</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>602 232 679 289</position>
+			</node>
+			<node id="REPEAT">
+				<name>Repeatable Problem</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>902 162 1006 227</position>
+			</node>
+			<node id="AvlblVrtlMmry">
+				<name>Printer Virtual Mem</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>1023 169 1101 229</position>
+			</node>
+			<node id="PSERRMEM">
+				<name>PS Error Memory</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>902 232 993 288</position>
+			</node>
+			<node id="TstpsTxt">
+				<name>testps.txt Output</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>1004 234 1095 290</position>
+			</node>
+			<node id="GrbldPS">
+				<name>PS Garbled </name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>560 403 629 446</position>
+			</node>
+			<node id="IncmpltPS">
+				<name>PS Complete</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>1104 234 1177 279</position>
+			</node>
+			<node id="PrtFile">
+				<name>Print to File</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>560 543 626 584</position>
+			</node>
+			<node id="PrtIcon">
+				<name>Printer Icon</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>1204 164 1272 206</position>
+			</node>
+			<node id="Problem6">
+				<name>Garbled Output</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>560 473 644 525</position>
+			</node>
+			<node id="Problem3">
+				<name>Incomplete Page</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>202 302 291 357</position>
+			</node>
+			<node id="PrtQueue">
+				<name>Printer Queue</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>3114 100 3192 148</position>
+			</node>
+			<node id="NtSpd">
+				<name>Net Speed</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>302 302 366 342</position>
+			</node>
+			<node id="Problem2">
+				<name>Too Slow</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>660 403 721 441</position>
+			</node>
+			<node id="PrtStatPaper">
+				<name>Printer Status</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>1304 164 1380 211</position>
+			</node>
+			<node id="PrtStatToner">
+				<name>Printer Status</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>1404 164 1480 211</position>
+			</node>
+			<node id="PrtStatMem">
+				<name>Printer Status</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>1504 164 1580 211</position>
+			</node>
+			<node id="PrtStatOff">
+				<name>Printer Status</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>1604 164 1680 211</position>
+			</node>
+			<textbox>
+				<caption>An expert system for printer troubleshooting in Windows 95.</caption>
+				<font color="000000" name="MS Sans Serif" size="10" bold="true" />
+				<position>15 12 570 34</position>
+			</textbox>
+			<textbox>
+				<caption>Reference: Microsoft, Inc.</caption>
+				<font color="000000" name="MS Sans Serif" size="10" bold="true" />
+				<position>10 48 204 67</position>
+			</textbox>
+		</genie>
+	</extensions>
+</smile>

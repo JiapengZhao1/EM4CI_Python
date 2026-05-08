@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This file was created by ACADEMIC version of SMILE -->
+<smile version="1.0" id="Unnamed" numsamples="10000" discsamples="10000">
+	<nodes>
+		<cpt id="U1">
+			<state id="a" />
+			<state id="b" />
+			<probabilities>0.9999399095239628 6.00904760372725e-05</probabilities>
+		</cpt>
+		<cpt id="U2">
+			<state id="a" />
+			<state id="b" />
+			<probabilities>1 4.959456007794048e-56</probabilities>
+		</cpt>
+		<cpt id="X1">
+			<state id="a" />
+			<state id="b" />
+			<parents>U1 U2</parents>
+			<probabilities>1 2.21449703603451e-33 0.01217314526684619 0.9878268547331538 5.709466404376359e-59 1 0.997530581083774 0.002469418916225922</probabilities>
+		</cpt>
+		<cpt id="R">
+			<state id="a" />
+			<state id="b" />
+			<parents>X1</parents>
+			<probabilities>0.9957568222287 0.004243177771300049 0.004243177771300049 0.9957568222287</probabilities>
+		</cpt>
+		<cpt id="U3">
+			<state id="a" />
+			<state id="b" />
+			<probabilities>1 7.260125433869181e-17</probabilities>
+		</cpt>
+		<cpt id="Z">
+			<state id="a" />
+			<state id="b" />
+			<parents>U2 U3 X1</parents>
+			<probabilities>0.0001044434769385502 0.9998955565230615 1.580496354450093e-72 1 1 3.275473106168671e-20 1.154866119266296e-49 1 0.999999999999879 1.210617105659288e-13 0.999999999940176 5.982401750094707e-11 0.0001266658121572841 0.9998733341878427 0.9963723473301178 0.003627652669882117</probabilities>
+		</cpt>
+		<cpt id="X2">
+			<state id="a" />
+			<state id="b" />
+			<parents>Z X1</parents>
+			<probabilities>0.9943558136291301 0.005644186370869962 0.005644186370869962 0.9943558136291301 0.9943558136291301 0.005644186370869962 0.005644186370869962 0.9943558136291301</probabilities>
+		</cpt>
+		<cpt id="U4">
+			<state id="a" />
+			<state id="b" />
+			<probabilities>0.0001628848601877693 0.9998371151398121</probabilities>
+		</cpt>
+		<cpt id="X3">
+			<state id="a" />
+			<state id="b" />
+			<parents>U3 U4 Z X2</parents>
+			<probabilities>0.9998944354348961 0.0001055645651038326 1.257273304227102e-07 0.9999998742726697 0.9995573891084802 0.0004426108915197449 0.9999999999998413 1.585544012063106e-13 0.9999944175778411 5.582422158919704e-06 0.03835712114671702 0.9616428788532829 0.6100738725521653 0.3899261274478347 3.91269778030989e-33 1 0.9972793369203538 0.002720663079646266 0.9999983959712576 1.604028742466936e-06 1 5.607332684640759e-17 2.138261507261129e-16 0.9999999999999998 0.0006574559926194037 0.9993425440073807 0.9999999999999998 1.106460573884899e-16 3.398135260227869e-138 1 1 7.694971506468605e-42</probabilities>
+		</cpt>
+		<cpt id="S">
+			<state id="a" />
+			<state id="b" />
+			<parents>X3</parents>
+			<probabilities>0.9924862680535547 0.00751373194644533 0.00751373194644533 0.9924862680535547</probabilities>
+		</cpt>
+		<cpt id="Y">
+			<state id="a" />
+			<state id="b" />
+			<parents>U1 U4 R X2 S</parents>
+			<probabilities>0.9898481626793006 0.01015183732069929 4.139835604111034e-89 1 1 7.375108284521951e-50 0.0005953228041717134 0.9994046771958283 2.538544418795483e-05 0.9999746145558119 0.9858088941116779 0.01419110588832218 1 1.318334399188323e-145 1.434109868148775e-119 0.9999999999999999 4.209739140096465e-13 0.9999999999995791 1.717534013861715e-07 0.9999998282465985 1.24525266232448e-51 1 0.003117186624128249 0.9968828133758718 1.069363589039075e-21 1 4.547201138718932e-18 0.9999999999999999 5.376787924415198e-10 0.9999999994623213 4.441539978244403e-08 0.9999999555846002 8.660076854175964e-05 0.9999133992314582 0.9979318146756508 0.002068185324349212 0.7025717699911648 0.2974282300088352 0.9999971759530043 2.824046995790864e-06 2.621185355175649e-11 0.9999999999737881 1 4.769194683914121e-21 0.892163761569632 0.107836238430368 1 1.813127709273874e-28 0.1545138719694544 0.8454861280305458 0.2618754415329434 0.7381245584670567 0.2612022952499142 0.7387977047500858 1 1.674654929189483e-141 0.9999999979452496 2.054750238284888e-09 0.01065477422479163 0.9893452257752084 1.934494833049012e-06 0.9999980655051669 0.9999997233418416 2.766581584367467e-07</probabilities>
+		</cpt>
+	</nodes>
+	<extensions>
+		<genie version="1.0" app="SMILE_ACADEMIC 2.2.0@40eb97e8a55a" name="Unnamed">
+			<node id="R">
+				<name>R</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>80 80 165 135</position>
+			</node>
+			<node id="Z">
+				<name>Z</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>100 100 185 155</position>
+			</node>
+			<node id="X1">
+				<name>X1</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>120 80 205 135</position>
+			</node>
+			<node id="X2">
+				<name>X2</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>120 81 205 136</position>
+			</node>
+			<node id="X3">
+				<name>X3</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>120 82 205 137</position>
+			</node>
+			<node id="S">
+				<name>S</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>100 100 185 155</position>
+			</node>
+			<node id="Y">
+				<name>Y</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>50 50 135 105</position>
+			</node>
+			<node id="U1">
+				<name>U1</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>85 50 170 105</position>
+			</node>
+			<node id="U2">
+				<name>U2</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>120 50 205 105</position>
+			</node>
+			<node id="U3">
+				<name>U3</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>120 50 205 105</position>
+			</node>
+			<node id="U4">
+				<name>U4</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>120 50 205 105</position>
+			</node>
+		</genie>
+	</extensions>
+</smile>

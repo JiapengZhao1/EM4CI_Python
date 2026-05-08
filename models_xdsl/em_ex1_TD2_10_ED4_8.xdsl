@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This file was created by ACADEMIC version of SMILE -->
+<smile version="1.0" id="Unnamed" numsamples="10000" discsamples="10000">
+	<nodes>
+		<cpt id="U1">
+			<state id="a" />
+			<state id="b" />
+			<state id="c" />
+			<state id="d" />
+			<probabilities>2.270712399709404e-08 0.0656678533590821 0.731357234297872 0.2029748896359218</probabilities>
+		</cpt>
+		<cpt id="U2">
+			<state id="a" />
+			<state id="b" />
+			<state id="c" />
+			<state id="d" />
+			<probabilities>8.877393864210571e-48 0.9997921078747953 2.637536725341354e-06 0.0002052545884794589</probabilities>
+		</cpt>
+		<cpt id="W">
+			<state id="a" />
+			<state id="b" />
+			<parents>U1 U2</parents>
+			<probabilities>0.9980805031433951 0.001919496856604847 0.9999999999999999 5.268267303011171e-20 5.273803942906977e-08 0.9999999472619604 0.8823405039837803 0.1176594960162197 5.611498837292798e-07 0.9999994388501162 0.9976031579673035 0.002396842032696572 1 3.836015687531603e-51 1 9.749228394161304e-20 1 2.300446654897791e-40 4.942089844473827e-06 0.9999950579101556 0.9988293566481068 0.0011706433518932 6.337420491531022e-08 0.9999999366257952 0.3522567226465362 0.6477432773534638 1 3.486044737578362e-59 1.075703879291529e-08 0.9999999892429611 0.9999882978106087 1.170218939115703e-05</probabilities>
+		</cpt>
+		<cpt id="R">
+			<state id="a" />
+			<state id="b" />
+			<parents>W</parents>
+			<probabilities>0.9904608939251892 0.009539106074810811 0.009539106074810811 0.9904608939251892</probabilities>
+		</cpt>
+		<cpt id="X">
+			<state id="a" />
+			<state id="b" />
+			<parents>R U1</parents>
+			<probabilities>0.9999971980536186 2.801946381472651e-06 1 2.017621622714774e-70 1 1.339672157374927e-21 0.0006571641068063643 0.9993428358931935 6.621059950675068e-10 0.999999999337894 1 1.676051405865517e-230 1 2.437656401199053e-138 2.868767349353687e-35 1</probabilities>
+		</cpt>
+		<cpt id="Y">
+			<state id="a" />
+			<state id="b" />
+			<parents>X U2</parents>
+			<probabilities>0.03150973121953909 0.9684902687804609 1.707840453536248e-10 0.9999999998292159 1 4.139785941831725e-20 0.9999986942388049 1.305761194923956e-06 1 1.679837593248268e-139 0.9999999999140036 8.59962527602592e-11 1 1.141243378893578e-18 2.310123402224469e-22 1</probabilities>
+		</cpt>
+	</nodes>
+	<extensions>
+		<genie version="1.0" app="SMILE_ACADEMIC 2.2.0@40eb97e8a55a" name="Unnamed">
+			<node id="W">
+				<name>W</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>100 100 185 155</position>
+			</node>
+			<node id="R">
+				<name>R</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>80 80 165 135</position>
+			</node>
+			<node id="X">
+				<name>X</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>120 80 205 135</position>
+			</node>
+			<node id="Y">
+				<name>Y</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>50 50 135 105</position>
+			</node>
+			<node id="U1">
+				<name>U1</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>85 50 170 105</position>
+			</node>
+			<node id="U2">
+				<name>U2</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="MS Sans Serif" size="8" />
+				<position>120 50 205 105</position>
+			</node>
+		</genie>
+	</extensions>
+</smile>
